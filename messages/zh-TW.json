@@ -1,0 +1,70 @@
+{
+  "header": {
+    "menu": {
+      "home": "首頁",
+      "productFeatures": "產品特色",
+      "ourTeam": "我們的團隊",
+      "getStarted": "開始使用"
+    },
+    "login": "登入",
+    "getStarted": "開始使用"
+  },
+  "hero": {
+    "badge": "為小型企業提供客製化軟體解決方案",
+    "title": "以",
+    "titleHighlight": "客製化軟體轉型您的業務",
+    "description": "我們根據您的業務需求，打造可擴展且高效的軟體解決方案。從網頁應用程式到移動應用程式，我們幫助小型企業透過科技實現成長。",
+    "ctaPrimary": "獲取免費諮詢",
+    "ctaSecondary": "查看我們的作品"
+  },
+  "clients": {
+    "cta": "準備開始您的專案了嗎？"
+  },
+  "features": {
+    "title": "為什麼選擇",
+    "titleHighlight": "開發解決方案",
+    "description": "我們提供高品質的軟體解決方案，幫助您的業務在數位世界中成長和成功。",
+    "fast": {
+      "title": "快速開發",
+      "description": "快速原型設計和敏捷開發流程，讓您的軟體能夠迅速上市。"
+    },
+    "scalable": {
+      "title": "可擴展的解決方案",
+      "description": "隨著您的業務成長而建立，我們的解決方案能夠隨著您的需求無縫擴展。"
+    },
+    "modern": {
+      "title": "現代化技術",
+      "description": "使用最新技術和最佳實踐，確保您的軟體具有未來性。"
+    }
+  },
+  "footer": {
+    "description": "以客製化軟體解決方案轉型您的業務。我們打造可擴展的應用程式，與您的成功一同成長。",
+    "services": {
+      "title": "服務",
+      "webDevelopment": "網頁開發",
+      "mobileApps": "移動應用程式",
+      "customSoftware": "客製化軟體",
+      "apiDevelopment": "API 開發",
+      "cloudSolutions": "雲端解決方案"
+    },
+    "company": {
+      "title": "公司",
+      "aboutUs": "關於我們",
+      "ourTeam": "我們的團隊",
+      "careers": "職涯機會",
+      "caseStudies": "案例研究",
+      "blog": "部落格"
+    },
+    "contact": {
+      "title": "聯絡方式",
+      "email": "hello@devsolutions.com",
+      "phone": "+1 (555) 123-4567",
+      "address": "科技街 123 號",
+      "city": "舊金山，加州 94105"
+    },
+    "copyright": "© 2024 開發解決方案。版權所有。",
+    "privacyPolicy": "隱私政策",
+    "termsOfService": "服務條款",
+    "cookiePolicy": "Cookie 政策"
+  }
+}

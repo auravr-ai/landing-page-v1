@@ -1,0 +1,70 @@
+{
+  "header": {
+    "menu": {
+      "home": "Home",
+      "productFeatures": "Product Features",
+      "ourTeam": "Our Team",
+      "getStarted": "Get Started"
+    },
+    "login": "Login",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "badge": "Custom Software Solutions for Small Business",
+    "title": "Transform Your Business with",
+    "titleHighlight": "Custom Software",
+    "description": "We build scalable, efficient software solutions tailored to your business needs. From web applications to mobile apps, we help small businesses grow with technology.",
+    "ctaPrimary": "Get Free Consultation",
+    "ctaSecondary": "View Our Work"
+  },
+  "clients": {
+    "cta": "Ready to Start Your Project?"
+  },
+  "features": {
+    "title": "Why Choose",
+    "titleHighlight": "DevSolutions",
+    "description": "We deliver high-quality software solutions that help your business grow and succeed in the digital world.",
+    "fast": {
+      "title": "Fast Development",
+      "description": "Rapid prototyping and agile development process to get your software to market quickly."
+    },
+    "scalable": {
+      "title": "Scalable Solutions",
+      "description": "Built to grow with your business, our solutions scale seamlessly as your needs evolve."
+    },
+    "modern": {
+      "title": "Modern Technology",
+      "description": "Using the latest technologies and best practices to ensure your software is future-proof."
+    }
+  },
+  "footer": {
+    "description": "Transform your business with custom software solutions. We build scalable applications that grow with your success.",
+    "services": {
+      "title": "Services",
+      "webDevelopment": "Web Development",
+      "mobileApps": "Mobile Apps",
+      "customSoftware": "Custom Software",
+      "apiDevelopment": "API Development",
+      "cloudSolutions": "Cloud Solutions"
+    },
+    "company": {
+      "title": "Company",
+      "aboutUs": "About Us",
+      "ourTeam": "Our Team",
+      "careers": "Careers",
+      "caseStudies": "Case Studies",
+      "blog": "Blog"
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "hello@devsolutions.com",
+      "phone": "+1 (555) 123-4567",
+      "address": "123 Tech Street",
+      "city": "San Francisco, CA 94105"
+    },
+    "copyright": "© 2024 DevSolutions. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "cookiePolicy": "Cookie Policy"
+  }
+}

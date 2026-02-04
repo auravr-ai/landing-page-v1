@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Menu, X, Code } from "lucide-react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
+import { useTranslations } from 'next-intl'
 import {
   Menubar,
   MenubarContent,
@@ -72,6 +73,7 @@ const Logo = ({ className }: { className?: string }) => {
 }
 
 export function Header() {
+  const t = useTranslations('header');
   const [menuState, setMenuState] = React.useState(false)
   const [isScrolled, setIsScrolled] = React.useState(false)
 
@@ -104,10 +106,10 @@ export function Header() {
                     </MenubarTrigger>
                     <MenubarContent>
                       <MenubarGroup>
-                        <MenubarItem>Home</MenubarItem>
-                        <MenubarItem>Product Features</MenubarItem>
-                        <MenubarItem>Our Team</MenubarItem>
-                        <MenubarItem>Get Started</MenubarItem>
+                        <MenubarItem>{t('menu.home')}</MenubarItem>
+                        <MenubarItem>{t('menu.productFeatures')}</MenubarItem>
+                        <MenubarItem>{t('menu.ourTeam')}</MenubarItem>
+                        <MenubarItem>{t('menu.getStarted')}</MenubarItem>
                       </MenubarGroup>
                     </MenubarContent>
                   </MenubarMenu>
@@ -137,7 +139,7 @@ export function Header() {
               </div>
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                 <Button variant="outline" size="sm" className={cn(isScrolled && "lg:hidden")}>
-                  <span>Login</span>
+                  <span>{t('login')}</span>
                 </Button>
                 <Button
                   size="sm"
@@ -147,7 +149,7 @@ export function Header() {
                       : "hidden bg-orange-500 hover:bg-orange-600",
                   )}
                 >
-                  <span>Get Started</span>
+                  <span>{t('getStarted')}</span>
                 </Button>
               </div>
             </div>
