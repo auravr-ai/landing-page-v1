@@ -217,7 +217,7 @@ export default function SoftwareDevelopmentWebsite() {
                     <span className="inline-block text-orange-500 text-6xl md:text-7xl xl:text-[5.25rem] font-semibold">
                       {t('hero.titleHighlight')}
                     </span>
-                    {t('hero.titleEnd', { defaultValue: '' })}
+                    {t('hero.titleEnd') && ` ${t('hero.titleEnd')}`}
                   </h1>
                   <p className="mx-auto mt-8 max-w-2xl text-balance text-lg text-muted-foreground">
                     {t('hero.description')}
