@@ -11,7 +11,7 @@
   },
   "hero": {
     "badge": "Custom Software Solutions for Small Business",
-    "title": "Transform Your Business with",
+    "titleStart": "Transform Your Business with",
     "titleHighlight": "Custom Software",
     "description": "We build scalable, efficient software solutions tailored to your business needs. From web applications to mobile apps, we help small businesses grow with technology.",
     "consultation": "Get Free Consultation",
