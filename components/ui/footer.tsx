@@ -1,6 +1,7 @@
 "use client"
 
 import { Code } from "lucide-react"
+import { useTranslation } from "react-i18next"
 
 function cn(...classes: (string | undefined | null | boolean)[]): string {
   return classes.filter(Boolean).join(" ")
@@ -18,6 +19,7 @@ const Logo = ({ className }: { className?: string }) => {
 }
 
 export function Footer() {
+  const { t } = useTranslation()
   return (
     <footer className="bg-background border-t border-orange-200">
       <div className="mx-auto max-w-7xl py-16 px-6 lg:px-8">
@@ -26,8 +28,7 @@ export function Footer() {
           <div className="space-y-4 sm:col-span-2 lg:col-span-1">
             <Logo />
             <p className="text-sm text-muted-foreground max-w-xs">
-              Transform your business with custom software solutions. We build scalable applications that grow with
-              your success.
+              {t('footer.description')}
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
@@ -59,31 +60,31 @@ export function Footer() {
 
           {/* Services */}
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-foreground">Services</h3>
+            <h3 className="text-sm font-semibold text-foreground">{t('footer.services.title')}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
-                  Web Development
+                  {t('footer.services.web')}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
-                  Mobile Apps
+                  {t('footer.services.mobile')}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
-                  Custom Software
+                  {t('footer.services.custom')}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
-                  API Development
+                  {t('footer.services.api')}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
-                  Cloud Solutions
+                  {t('footer.services.cloud')}
                 </a>
               </li>
             </ul>
@@ -91,31 +92,31 @@ export function Footer() {
 
           {/* Company */}
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-foreground">Company</h3>
+            <h3 className="text-sm font-semibold text-foreground">{t('footer.company.title')}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
-                  About Us
+                  {t('footer.company.about')}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
-                  Our Team
+                  {t('footer.company.team')}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
-                  Careers
+                  {t('footer.company.careers')}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
-                  Case Studies
+                  {t('footer.company.caseStudies')}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
-                  Blog
+                  {t('footer.company.blog')}
                 </a>
               </li>
             </ul>
@@ -123,7 +124,7 @@ export function Footer() {
 
           {/* Contact */}
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-foreground">Contact</h3>
+            <h3 className="text-sm font-semibold text-foreground">{t('footer.contact.title')}</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-center space-x-2">
                 <svg className="h-4 w-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -134,7 +135,7 @@ export function Footer() {
                     d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span className="break-all">hello@devsolutions.com</span>
+                <span className="break-all">{t('footer.contact.email')}</span>
               </li>
               <li className="flex items-center space-x-2">
                 <svg className="h-4 w-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -145,7 +146,7 @@ export function Footer() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <span>+1 (555) 123-4567</span>
+                <span>{t('footer.contact.phone')}</span>
               </li>
               <li className="flex items-start space-x-2">
                 <svg className="h-4 w-4 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -163,9 +164,9 @@ export function Footer() {
                   />
                 </svg>
                 <span>
-                  123 Tech Street
+                  {t('footer.contact.address')}
                   <br />
-                  San Francisco, CA 94105
+                  {t('footer.contact.city')}
                 </span>
               </li>
             </ul>
@@ -175,16 +176,16 @@ export function Footer() {
         {/* Bottom section */}
         <div className="mt-12 pt-8 border-t border-orange-200">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-            <div className="text-sm text-muted-foreground">© 2024 DevSolutions. All rights reserved.</div>
+            <div className="text-sm text-muted-foreground">{t('footer.copyright')}</div>
             <div className="flex flex-wrap justify-center sm:justify-end gap-x-6 gap-y-2 text-sm">
               <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
-                Privacy Policy
+                {t('footer.privacy')}
               </a>
               <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
-                Terms of Service
+                {t('footer.terms')}
               </a>
               <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
-                Cookie Policy
+                {t('footer.cookies')}
               </a>
             </div>
           </div>
