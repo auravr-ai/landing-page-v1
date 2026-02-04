@@ -5,6 +5,16 @@ import Link from "next/link"
 import { Menu, X, Code } from "lucide-react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
+import {
+  Menubar,
+  MenubarContent,
+  MenubarGroup,
+  MenubarItem,
+  MenubarMenu,
+  MenubarSeparator,
+  MenubarShortcut,
+  MenubarTrigger,
+} from "@/components/ui/menubar"
 
 function cn(...classes: (string | undefined | null | boolean)[]): string {
   return classes.filter(Boolean).join(" ")
@@ -94,6 +104,21 @@ export function Header() {
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-0">
             <div className="flex w-full justify-between lg:w-auto">
               <Link href="/" aria-label="home" className="flex items-center space-x-2">
+                <Menubar>
+                  <MenubarMenu>
+                    <MenubarTrigger>
+                      <Menu className="h-5 w-5" />
+                    </MenubarTrigger>
+                    <MenubarContent>
+                      <MenubarGroup>
+                        <MenubarItem>Home</MenubarItem>
+                        <MenubarItem>Product Features</MenubarItem>
+                        <MenubarItem>Our Team</MenubarItem>
+                        <MenubarItem>Get Started</MenubarItem>
+                      </MenubarGroup>
+                    </MenubarContent>
+                  </MenubarMenu>
+                </Menubar>
                 <Logo />
               </Link>
 
