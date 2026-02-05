@@ -1,22 +1,7 @@
 "use client"
 
-import { Code } from "lucide-react"
 import { useTranslation } from "react-i18next"
-
-function cn(...classes: (string | undefined | null | boolean)[]): string {
-  return classes.filter(Boolean).join(" ")
-}
-
-const Logo = ({ className }: { className?: string }) => {
-  return (
-    <div className={cn("flex items-center space-x-2", className)}>
-      <div className="bg-orange-500 rounded-lg p-2">
-        <Code className="h-6 w-6 text-white" />
-      </div>
-      <span className="text-xl font-bold">BBros</span>
-    </div>
-  )
-}
+import { Logo } from "@/components/ui/logo"
 
 export function Footer() {
   const { t } = useTranslation()
