@@ -6,6 +6,7 @@ import { Menu, X, Code, Moon, Sun } from "lucide-react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 import { useTranslation } from "react-i18next"
+import { useTheme } from "next-themes"
 import i18n from "i18next"
 import {
   Menubar,
@@ -75,9 +76,14 @@ const Logo = ({ className }: { className?: string }) => {
 
 export function Header() {
   const { t } = useTranslation()
+  const { theme, setTheme } = useTheme()
   const [menuState, setMenuState] = React.useState(false)
   const [isScrolled, setIsScrolled] = React.useState(false)
-  const [theme, setTheme] = React.useState<"light" | "dark">("light")
+  const [mounted, setMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
 
   React.useEffect(() => {
     if (typeof window === "undefined") return
@@ -89,15 +95,27 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  React.useEffect(() => {
-    const currentTheme = document.documentElement.classList.contains("dark") ? "dark" : "light"
-    setTheme(currentTheme)
-  }, [])
-
   const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light"
-    document.documentElement.classList.toggle("dark")
-    setTheme(newTheme)
+    setTheme(theme === "light" ? "dark" : "light")
+  }
+
+  const toggleLanguage = () => {
+    const currentLang = i18n.language
+    i18n.changeLanguage(currentLang === 'en' ? 'zh-TW' : 'en')
+  }
+
+  if (!mounted) {
+    return (
+      <header>
+        <nav className="fixed z-20 w-full px-2 group">
+          <div className="mx-auto mt-1 px-4 max-w-4xl">
+            <div className="relative flex flex-wrap items-center justify-between gap-6 py-3">
+              {/* Minimal placeholder to prevent layout shift */}
+            </div>
+          </div>
+        </nav>
+      </header>
+    )
   }
 
   return (
@@ -132,10 +150,7 @@ export function Header() {
                           <MenubarItem onClick={toggleTheme}>
                             {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
                           </MenubarItem>
-                          <MenubarItem onClick={() => {
-                            const currentLang = i18n.language
-                            i18n.changeLanguage(currentLang === 'en' ? 'zh-TW' : 'en')
-                          }}>
+                          <MenubarItem onClick={toggleLanguage}>
                             {i18n.language === 'en' ? '中文' : 'EN'}
                           </MenubarItem>
                         </div>
