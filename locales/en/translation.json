@@ -7,7 +7,7 @@
       "getStarted": "Get Started"
     },
     "login": "Login",
-    "getStarted": "Get Started"
+    "getStarted": "Join Waitlist"
   },
   "hero": {
     "badge": "Custom Software Solutions for Small Business",
@@ -58,8 +58,8 @@
       "title": "Contact",
       "email": "general@auravr.net",
       "phone": "+852 9841 0407",
-      "address": "123 Tech Street",
-      "city": "San Francisco, CA 94105"
+      "address": "The University of Hong Kong",
+      "city": "Pokfulam, Hong Kong"
     },
     "copyright": "© 2026 AURA. All rights reserved.",
     "privacy": "Privacy Policy",
