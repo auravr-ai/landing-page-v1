@@ -105,8 +105,10 @@ export function Header() {
       <nav data-state={menuState && "active"} className="fixed z-20 w-full px-2 group">
         <div
           className={cn(
-            "mx-auto mt-1 max-w-4xl px-4 transition-all duration-300 lg:px-8",
-            isScrolled && "bg-background/50 max-w-3xl rounded-2xl border backdrop-blur-lg lg:px-4",
+            "mx-auto mt-1 px-4 transition-all duration-300 lg:px-8",
+            isScrolled
+            ? "bg-background/50 max-w-3xl rounded-2xl border backdrop-blur-lg lg:px-4"
+            : "max-w-4xl",
           )}
         >
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-0">
