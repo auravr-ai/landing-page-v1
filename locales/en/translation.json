@@ -10,7 +10,6 @@
     "getStarted": "Join Waitlist"
   },
   "hero": {
-    "badge": "Custom Software Solutions for Small Business",
     "titleStart": "Enabling",
     "titleHighlight": "Immersive & Data Driven",
     "titleEnd": "Autism Treatment",
@@ -37,7 +36,7 @@
     }
   },
   "footer": {
-    "description": "Transform your business with custom software solutions. We build scalable applications that grow with your success.",
+    "description": "Enabling immersive and data driven autism treatment.",
     "services": {
       "title": "Services",
       "web": "Web Development",
@@ -48,11 +47,7 @@
     },
     "company": {
       "title": "Company",
-      "about": "About Us",
-      "team": "Our Team",
-      "careers": "Careers",
-      "caseStudies": "Case Studies",
-      "blog": "Blog"
+      "team": "Our Team"
     },
     "contact": {
       "title": "Contact",

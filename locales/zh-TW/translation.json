@@ -10,7 +10,6 @@
     "getStarted": "開始使用"
   },
   "hero": {
-    "badge": "為小型企業提供定制軟體解決方案",
     "titleStart": "用",
     "titleHighlight": "定制軟體",
     "titleEnd": "轉型您的業務",
@@ -48,11 +47,7 @@
     },
     "company": {
       "title": "公司",
-      "about": "關於我們",
-      "team": "我們的團隊",
-      "careers": "職業機會",
-      "caseStudies": "案例研究",
-      "blog": "部落格"
+      "team": "我們的團隊"
     },
     "contact": {
       "title": "聯絡方式",

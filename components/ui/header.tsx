@@ -138,11 +138,22 @@ export function Header() {
                       </MenubarGroup>
                       <MenubarSeparator />
                       <MenubarGroup>
-                        <div className="flex gap-2">
-                          <MenubarItem onClick={toggleTheme} aria-label="Toggle theme">
-                            {resolvedTheme === "dark" ? "☀️" : "🌙"}
+                        <div className="grid w-full grid-cols-2 gap-2">
+                          <MenubarItem
+                            className="justify-center"
+                            onClick={toggleTheme}
+                            aria-label="Toggle theme"
+                            >
+                            {resolvedTheme === "dark" ? (
+                              <Sun className="size-4" />
+                            ) : (
+                              <Moon className="size-4" />
+                            )}
                           </MenubarItem>
-                          <MenubarItem onClick={toggleLanguage}>
+                          <MenubarItem
+                            className="justify-center"
+                            onClick={toggleLanguage}
+                          >
                             {i18n.language === "en" ? "中文" : "EN"}
                           </MenubarItem>
                         </div>

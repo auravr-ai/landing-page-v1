@@ -81,27 +81,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
-                  {t('footer.company.about')}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
                   {t('footer.company.team')}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
-                  {t('footer.company.careers')}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
-                  {t('footer.company.caseStudies')}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
-                  {t('footer.company.blog')}
                 </a>
               </li>
             </ul>
