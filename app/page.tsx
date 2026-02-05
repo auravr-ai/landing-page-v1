@@ -212,7 +212,7 @@ export default function SoftwareDevelopmentWebsite() {
                     </div>
                   </a>
 
-                  <h1 className="mt-8 max-w-4xl mx-auto text-balance text-6xl md:text-7xl lg:mt-16 xl:text-[5.25rem]">
+                  <h1 className="mt-8 max-w-5xl mx-auto text-balance text-6xl md:text-7xl lg:mt-16 xl:text-[5.25rem]">
                     {t('hero.titleStart')}{" "}
                     <span className="inline-block text-orange-500 text-6xl md:text-7xl xl:text-[5.25rem] font-semibold">
                       {t('hero.titleHighlight')}
