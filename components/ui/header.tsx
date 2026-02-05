@@ -117,7 +117,7 @@ export function Header() {
                     <MenubarTrigger>
                       <Menu className="h-5 w-5" />
                     </MenubarTrigger>
-                    <MenubarContent>
+                    <MenubarContent className="w-auto">
                       <MenubarGroup>
                         <MenubarItem>{t('header.menu.home')}</MenubarItem>
                         <MenubarItem>{t('header.menu.features')}</MenubarItem>
@@ -126,16 +126,17 @@ export function Header() {
                       </MenubarGroup>
                       <MenubarSeparator />
                       <MenubarGroup>
-                        <MenubarItem onClick={toggleTheme}>
-                          {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
-                        </MenubarItem>
-                        <MenubarItem onClick={() => {
-                          const currentLang = i18n.language
-                          // Toggle between English and Traditional Chinese (zh-TW)
-                          i18n.changeLanguage(currentLang === 'en' ? 'zh-TW' : 'en')
-                        }}>
-                          {i18n.language === 'en' ? '中文' : 'EN'}
-                        </MenubarItem>
+                        <div className="flex gap-2">
+                          <MenubarItem onClick={toggleTheme}>
+                            {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
+                          </MenubarItem>
+                          <MenubarItem onClick={() => {
+                            const currentLang = i18n.language
+                            i18n.changeLanguage(currentLang === 'en' ? 'zh-TW' : 'en')
+                          }}>
+                            {i18n.language === 'en' ? '中文' : 'EN'}
+                          </MenubarItem>
+                        </div>
                       </MenubarGroup>
                     </MenubarContent>
                   </MenubarMenu>
