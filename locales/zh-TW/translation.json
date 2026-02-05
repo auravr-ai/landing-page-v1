@@ -60,5 +60,100 @@
     "privacy": "隱私政策",
     "terms": "服務條款",
     "cookies": "Cookie 政策"
+  },
+  "productFeatures": {
+    "title": "產品",
+    "titleHighlight": "特色",
+    "description": "探索讓我們的平台脫穎而出並幫助您實現目標的強大功能。",
+    "features": {
+      "immersive": {
+        "title": "沉浸式體驗",
+        "description": "使用尖端的VR/AR技術進行自閉症治療，讓用戶參與並創造難忘的體驗。"
+      },
+      "dataAnalytics": {
+        "title": "數據分析",
+        "description": "使用全面的分析和報告工具追蹤進度並獲得見解。"
+      },
+      "aiPowered": {
+        "title": "AI驅動",
+        "description": "利用人工智能個性化治療計劃並優化結果。"
+      },
+      "cloudBased": {
+        "title": "雲端平台",
+        "description": "使用我們安全的雲基礎設施，隨時隨地訪問您的數據。"
+      },
+      "customizable": {
+        "title": "可定制解決方案",
+        "description": "通過靈活的配置選項定制平台以滿足您的特定需求。"
+      },
+      "support": {
+        "title": "24/7支援",
+        "description": "我們的專業支援團隊全天候為您提供幫助。"
+      }
+    }
+  },
+  "ourTeam": {
+    "title": "認識我們的",
+    "titleHighlight": "團隊",
+    "description": "我們的專業團隊致力於改善自閉症治療。",
+    "teamMembers": {
+      "member1": {
+        "name": "陳思雅博士",
+        "role": "首席執行官",
+        "description": "憑藉15年以上的醫療技術和自閉症研究經驗，領導AURA的願景。"
+      },
+      "member2": {
+        "name": "黃志明",
+        "role": "首席技術官",
+        "description": "VR/AR開發專家，熱衷於創造無障礙技術。"
+      },
+      "member3": {
+        "name": "張美玲博士",
+        "role": "研究主管",
+        "description": "心理學博士，專攻自閉症譜系障礙和數據驅動治療。"
+      },
+      "member4": {
+        "name": "劉大衛",
+        "role": "首席開發員",
+        "description": "全棧開發人員，為醫療應用構建可擴展的解決方案。"
+      },
+      "member5": {
+        "name": "李潔希",
+        "role": "UX/UI設計師",
+        "description": "為患者和護理人員創造直觀且易於訪問的界面。"
+      },
+      "member6": {
+        "name": "朴建明博士",
+        "role": "臨床顧問",
+        "description": "經驗豐富的臨床醫生，確保我們的解決方案滿足實際醫療需求。"
+      }
+    },
+    "achievements": {
+      "title": "成就與",
+      "titleHighlight": "認可",
+      "description": "我們在推進自閉症治療方面的成就和里程碑。",
+      "items": {
+        "award1": {
+          "title": "2025年最佳醫療創新",
+          "description": "因使用VR技術進行自閉症治療的突破性方法而獲得認可。",
+          "metric": "科技健康獎"
+        },
+        "award2": {
+          "title": "500+活躍用戶",
+          "description": "使用AURA平台的家庭和專業人士社區不斷增長。",
+          "metric": "2026年1月"
+        },
+        "award3": {
+          "title": "香港大學合作夥伴",
+          "description": "與香港大學的合作研究計劃。",
+          "metric": "自2024年"
+        },
+        "award4": {
+          "title": "臨床試驗成功",
+          "description": "患者參與度和治療結果提高了85%。",
+          "metric": "2025年研究"
+        }
+      }
+    }
   }
 }

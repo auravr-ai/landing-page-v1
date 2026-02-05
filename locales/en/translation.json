@@ -60,5 +60,100 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "cookies": "Cookie Policy"
+  },
+  "productFeatures": {
+    "title": "Product",
+    "titleHighlight": "Features",
+    "description": "Discover the powerful features that make our platform stand out and help you achieve your goals.",
+    "features": {
+      "immersive": {
+        "title": "Immersive Experience",
+        "description": "Engage users with cutting-edge VR/AR technology for autism treatment that creates memorable experiences."
+      },
+      "dataAnalytics": {
+        "title": "Data Analytics",
+        "description": "Track progress and gain insights with comprehensive analytics and reporting tools."
+      },
+      "aiPowered": {
+        "title": "AI-Powered",
+        "description": "Leverage artificial intelligence to personalize treatment plans and optimize outcomes."
+      },
+      "cloudBased": {
+        "title": "Cloud-Based Platform",
+        "description": "Access your data anywhere, anytime with our secure cloud infrastructure."
+      },
+      "customizable": {
+        "title": "Customizable Solutions",
+        "description": "Tailor the platform to meet your specific needs with flexible configuration options."
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "Get help whenever you need it with our dedicated support team available around the clock."
+      }
+    }
+  },
+  "ourTeam": {
+    "title": "Meet Our",
+    "titleHighlight": "Team",
+    "description": "Our team of dedicated professionals working to make a difference in autism treatment.",
+    "teamMembers": {
+      "member1": {
+        "name": "Dr. Sarah Chen",
+        "role": "Chief Executive Officer",
+        "description": "Leading AURA's vision with 15+ years in healthcare technology and autism research."
+      },
+      "member2": {
+        "name": "Michael Wong",
+        "role": "Chief Technology Officer",
+        "description": "Expert in VR/AR development with a passion for creating accessible technology."
+      },
+      "member3": {
+        "name": "Dr. Emily Zhang",
+        "role": "Head of Research",
+        "description": "PhD in Psychology specializing in autism spectrum disorders and data-driven treatment."
+      },
+      "member4": {
+        "name": "David Liu",
+        "role": "Lead Developer",
+        "description": "Full-stack developer building scalable solutions for healthcare applications."
+      },
+      "member5": {
+        "name": "Jessica Lee",
+        "role": "UX/UI Designer",
+        "description": "Creating intuitive and accessible interfaces for patients and caregivers."
+      },
+      "member6": {
+        "name": "Dr. James Park",
+        "role": "Clinical Advisor",
+        "description": "Experienced clinician ensuring our solutions meet real-world healthcare needs."
+      }
+    },
+    "achievements": {
+      "title": "Achievements &",
+      "titleHighlight": "Recognition",
+      "description": "Our accomplishments and milestones in advancing autism treatment.",
+      "items": {
+        "award1": {
+          "title": "Best Healthcare Innovation 2025",
+          "description": "Recognized for groundbreaking approach to autism treatment using VR technology.",
+          "metric": "Tech Health Awards"
+        },
+        "award2": {
+          "title": "500+ Active Users",
+          "description": "Growing community of families and professionals using AURA platform.",
+          "metric": "January 2026"
+        },
+        "award3": {
+          "title": "HKU Partnership",
+          "description": "Collaborative research program with The University of Hong Kong.",
+          "metric": "Since 2024"
+        },
+        "award4": {
+          "title": "Clinical Trial Success",
+          "description": "85% improvement rate in patient engagement and treatment outcomes.",
+          "metric": "2025 Study"
+        }
+      }
+    }
   }
 }
