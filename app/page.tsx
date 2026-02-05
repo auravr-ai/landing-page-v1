@@ -267,8 +267,8 @@ export default function SoftwareDevelopmentWebsite() {
                   <div className="group-hover:blur-xs mx-auto mt-12 grid max-w-2xl grid-cols-4 gap-x-12 gap-y-8 transition-all duration-500 group-hover:opacity-50 sm:gap-x-16 sm:gap-y-14">
                     <div className="flex">
                       <img
-                        className="mx-auto h-5 w-fit dark:invert opacity-60"
-                        src="https://html.tailus.io/blocks/customers/nvidia.svg"
+                        className="mx-auto h-5 w-fit dark:[filter:brightness(0)_invert(1)] opacity-60"
+                        src="https://www.ent-fund.org/uploads/images/common/header/logo_en.png"
                         alt="Client Logo"
                         height="20"
                         width="auto"
@@ -276,7 +276,7 @@ export default function SoftwareDevelopmentWebsite() {
                     </div>
                     <div className="flex">
                       <img
-                        className="mx-auto h-4 w-fit dark:invert opacity-60"
+                        className="mx-auto h-4 w-fit dark:[filter:invert(1)_brightness(0)_invert(1)] opacity-60"
                         src="https://html.tailus.io/blocks/customers/column.svg"
                         alt="Client Logo"
                         height="16"
@@ -285,8 +285,8 @@ export default function SoftwareDevelopmentWebsite() {
                     </div>
                     <div className="flex">
                       <img
-                        className="mx-auto h-4 w-fit dark:invert opacity-60"
-                        src="https://html.tailus.io/blocks/customers/github.svg"
+                        className="mx-auto h-4 w-fit dark:[filter:invert(1)_brightness(0)_invert(1)] opacity-60"
+                        src="https://www.med.hku.hk/-/media/HKU-Med-Fac/Header/HKU_LKS-Faculty-of-Medicine_Mast-390x60.png"
                         alt="Client Logo"
                         height="16"
                         width="auto"
@@ -294,8 +294,8 @@ export default function SoftwareDevelopmentWebsite() {
                     </div>
                     <div className="flex">
                       <img
-                        className="mx-auto h-5 w-fit dark:invert opacity-60"
-                        src="https://html.tailus.io/blocks/customers/nike.svg"
+                        className="mx-auto h-5 w-fit dark:[filter:invert(1)_brightness(0)_invert(1)] opacity-60"
+                        src="https://scontent-tpe1-1.cdninstagram.com/v/t51.2885-19/587809565_18069496418372572_2878294653041376475_n.jpg?stp=dst-jpg_s320x320_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby40ODAuYzIifQ&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2QG7hpSlKCWZ9T8CDvPk2NgScv_KsEv3EzxvmSuV6KqGsxi9gq7nBLg02haboBQey68&_nc_ohc=qVfhDd3sEkoQ7kNvwGp14-o&_nc_gid=5ImtSq1ngAwkDOTtU-onLA&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Afv0xpCVU8qaM2srD-oAfzrjsD7hNsiL_4GDWp9SBMP1PA&oe=698A1BCC&_nc_sid=8b3546"
                         alt="Client Logo"
                         height="20"
                         width="auto"
@@ -303,7 +303,7 @@ export default function SoftwareDevelopmentWebsite() {
                     </div>
                     <div className="flex">
                       <img
-                        className="mx-auto h-5 w-fit dark:invert opacity-60"
+                        className="mx-auto h-5 w-fit dark:[filter:invert(1)_brightness(0)_invert(1)] opacity-60"
                         src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
                         alt="Client Logo"
                         height="20"
@@ -312,7 +312,7 @@ export default function SoftwareDevelopmentWebsite() {
                     </div>
                     <div className="flex">
                       <img
-                        className="mx-auto h-4 w-fit dark:invert opacity-60"
+                        className="mx-auto h-4 w-fit dark:[filter:invert(1)_brightness(0)_invert(1)] opacity-60"
                         src="https://html.tailus.io/blocks/customers/laravel.svg"
                         alt="Client Logo"
                         height="16"
@@ -321,7 +321,7 @@ export default function SoftwareDevelopmentWebsite() {
                     </div>
                     <div className="flex">
                       <img
-                        className="mx-auto h-7 w-fit dark:invert opacity-60"
+                        className="mx-auto h-7 w-fit dark:[filter:invert(1)_brightness(0)_invert(1)] opacity-60"
                         src="https://html.tailus.io/blocks/customers/lilly.svg"
                         alt="Client Logo"
                         height="28"
@@ -330,7 +330,7 @@ export default function SoftwareDevelopmentWebsite() {
                     </div>
                     <div className="flex">
                       <img
-                        className="mx-auto h-6 w-fit dark:invert opacity-60"
+                        className="mx-auto h-6 w-fit dark:[filter:invert(1)_brightness(0)_invert(1)] opacity-60"
                         src="https://html.tailus.io/blocks/customers/openai.svg"
                         alt="Client Logo"
                         height="24"
