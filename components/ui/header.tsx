@@ -76,7 +76,7 @@ const Logo = ({ className }: { className?: string }) => {
 
 export function Header() {
   const { t } = useTranslation()
-  const { theme, setTheme } = useTheme()
+  const { setTheme, resolvedTheme } = useTheme()
   const [menuState, setMenuState] = React.useState(false)
   const [isScrolled, setIsScrolled] = React.useState(false)
   const [mounted, setMounted] = React.useState(false)
@@ -96,9 +96,9 @@ export function Header() {
   }, [])
 
   const toggleTheme = () => {
-    // If theme is 'system' or anything other than 'light', switch to 'light'
-    // Otherwise switch to 'dark'
-    setTheme(theme === "dark" ? "light" : "dark")
+    // Use resolvedTheme to check the actual applied theme
+    // This handles 'system' theme correctly by checking the resolved appearance
+    setTheme(resolvedTheme === "dark" ? "light" : "dark")
   }
 
   const toggleLanguage = () => {
@@ -150,7 +150,7 @@ export function Header() {
                       <MenubarGroup>
                         <div className="flex gap-2">
                           <MenubarItem onClick={toggleTheme}>
-                            {theme === 'dark' ? '☀️ Light' : '🌙 Dark'}
+                            {resolvedTheme === 'dark' ? '☀️ Light' : '🌙 Dark'}
                           </MenubarItem>
                           <MenubarItem onClick={toggleLanguage}>
                             {i18n.language === 'en' ? '中文' : 'EN'}
