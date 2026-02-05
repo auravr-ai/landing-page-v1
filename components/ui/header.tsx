@@ -96,7 +96,9 @@ export function Header() {
   }, [])
 
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light")
+    // If theme is 'system' or anything other than 'light', switch to 'light'
+    // Otherwise switch to 'dark'
+    setTheme(theme === "dark" ? "light" : "dark")
   }
 
   const toggleLanguage = () => {
@@ -148,7 +150,7 @@ export function Header() {
                       <MenubarGroup>
                         <div className="flex gap-2">
                           <MenubarItem onClick={toggleTheme}>
-                            {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
+                            {theme === 'dark' ? '☀️ Light' : '🌙 Dark'}
                           </MenubarItem>
                           <MenubarItem onClick={toggleLanguage}>
                             {i18n.language === 'en' ? '中文' : 'EN'}
