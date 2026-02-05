@@ -6,12 +6,15 @@ import { Menu, X, Code } from "lucide-react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 import { useTranslation } from "react-i18next"
+import i18n from "i18next"
 import {
   Menubar,
   MenubarContent,
   MenubarGroup,
   MenubarItem,
   MenubarMenu,
+  MenubarSeparator,
+  MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/menubar"
 
@@ -108,6 +111,16 @@ export function Header() {
                         <MenubarItem>{t('header.menu.features')}</MenubarItem>
                         <MenubarItem>{t('header.menu.team')}</MenubarItem>
                         <MenubarItem>{t('header.menu.getStarted')}</MenubarItem>
+                      </MenubarGroup>
+                      <MenubarSeparator />
+                      <MenubarGroup>
+                        <MenubarItem onClick={() => {
+                          const currentLang = i18n.language
+                          // Toggle between English and Traditional Chinese (zh-TW)
+                          i18n.changeLanguage(currentLang === 'en' ? 'zh-TW' : 'en')
+                        }}>
+                          {i18n.language === 'en' ? '中文' : 'EN'}
+                        </MenubarItem>
                       </MenubarGroup>
                     </MenubarContent>
                   </MenubarMenu>
