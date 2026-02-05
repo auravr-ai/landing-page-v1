@@ -7,7 +7,7 @@ export const Logo = ({ className }: { className?: string }) => {
       <div className="bg-orange-500 rounded-lg p-2">
         <Code className="h-6 w-6 text-white" />
       </div>
-      <span className="text-xl font-bold">BBros</span>
+      <span className="text-xl font-bold">AURA</span>
     </div>
   )
 }
