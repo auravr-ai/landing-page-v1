@@ -139,11 +139,11 @@ export function Header() {
                       <MenubarSeparator />
                       <MenubarGroup>
                         <div className="flex gap-2">
-                          <MenubarItem onClick={toggleTheme}>
-                            {resolvedTheme === 'dark' ? '☀️ Light' : '🌙 Dark'}
+                          <MenubarItem onClick={toggleTheme} aria-label="Toggle theme">
+                            {resolvedTheme === "dark" ? "☀️" : "🌙"}
                           </MenubarItem>
                           <MenubarItem onClick={toggleLanguage}>
-                            {i18n.language === 'en' ? '中文' : 'EN'}
+                            {i18n.language === "en" ? "中文" : "EN"}
                           </MenubarItem>
                         </div>
                       </MenubarGroup>
