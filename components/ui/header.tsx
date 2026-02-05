@@ -172,14 +172,10 @@ export function Header() {
                 </Button>
                 <Button
                   size="sm"
-                  className={cn(
-                    isScrolled
-                      ? "lg:inline-flex bg-orange-500 hover:bg-orange-600"
-                      : "hidden bg-orange-500 hover:bg-orange-600",
-                  )}
+                  className="bg-orange-500 hover:bg-orange-600"
                 >
                   <span>{t('header.getStarted')}</span>
-                </Button>
+                </Button> 
               </div>
             </div>
           </div>
