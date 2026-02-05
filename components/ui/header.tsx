@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { Menu, X, Code } from "lucide-react"
+import { Menu, X, Code, Moon, Sun } from "lucide-react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 import { useTranslation } from "react-i18next"
@@ -77,6 +77,7 @@ export function Header() {
   const { t } = useTranslation()
   const [menuState, setMenuState] = React.useState(false)
   const [isScrolled, setIsScrolled] = React.useState(false)
+  const [theme, setTheme] = React.useState<"light" | "dark">("light")
 
   React.useEffect(() => {
     if (typeof window === "undefined") return
@@ -87,6 +88,17 @@ export function Header() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  React.useEffect(() => {
+    const currentTheme = document.documentElement.classList.contains("dark") ? "dark" : "light"
+    setTheme(currentTheme)
+  }, [])
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light"
+    document.documentElement.classList.toggle("dark")
+    setTheme(newTheme)
+  }
 
   return (
     <header>
@@ -114,6 +126,9 @@ export function Header() {
                       </MenubarGroup>
                       <MenubarSeparator />
                       <MenubarGroup>
+                        <MenubarItem onClick={toggleTheme}>
+                          {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
+                        </MenubarItem>
                         <MenubarItem onClick={() => {
                           const currentLang = i18n.language
                           // Toggle between English and Traditional Chinese (zh-TW)
