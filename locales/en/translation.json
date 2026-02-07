@@ -60,5 +60,156 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "cookies": "Cookie Policy"
+  },
+  "featuresPage": {
+    "title": "Product Features",
+    "subtitle": "Discover the innovative features that power our immersive gaming experience",
+    "keyFeatures": {
+      "title": "Key Features",
+      "immersiveGameplay": {
+        "title": "Immersive Gameplay",
+        "description": "Experience unprecedented immersion with cutting-edge VR technology and realistic physics"
+      },
+      "aiPoweredNPCs": {
+        "title": "AI-Powered NPCs",
+        "description": "Interact with intelligent characters that adapt and respond naturally to your actions"
+      },
+      "dynamicEnvironments": {
+        "title": "Dynamic Environments",
+        "description": "Explore living worlds that change and evolve based on your choices and actions"
+      },
+      "multiplayerExperience": {
+        "title": "Multiplayer Experience",
+        "description": "Team up with friends or compete globally in seamless online gameplay"
+      },
+      "crossPlatform": {
+        "title": "Cross-Platform Support",
+        "description": "Play anywhere, anytime across PC, console, and mobile devices"
+      },
+      "regularUpdates": {
+        "title": "Regular Updates",
+        "description": "Enjoy continuous new content, features, and improvements based on community feedback"
+      }
+    },
+    "environments": {
+      "title": "Game Environments",
+      "forestRealm": {
+        "name": "Forest Realm",
+        "description": "Dense forests with ancient trees and mystical creatures"
+      },
+      "urbanCityscape": {
+        "name": "Urban Cityscape",
+        "description": "Bustling metropolis with towering skyscrapers and neon lights"
+      },
+      "desertWasteland": {
+        "name": "Desert Wasteland",
+        "description": "Vast sandy expanse with hidden treasures and dangers"
+      },
+      "underwaterWorld": {
+        "name": "Underwater World",
+        "description": "Explore the depths of mysterious ocean realms"
+      },
+      "mountainPeaks": {
+        "name": "Mountain Peaks",
+        "description": "Scale majestic mountains and discover hidden valleys"
+      },
+      "spaceStation": {
+        "name": "Space Station",
+        "description": "Experience zero gravity in futuristic orbital facilities"
+      }
+    }
+  },
+  "teamPage": {
+    "title": "Our Team",
+    "subtitle": "Meet the talented people behind AURA",
+    "teamMembers": {
+      "title": "Team Members",
+      "member1": {
+        "name": "Jake Liu",
+        "role": "CEO & Founder",
+        "bio": "Passionate about creating innovative solutions for autism treatment through immersive technology"
+      },
+      "member2": {
+        "name": "Sarah Chen",
+        "role": "Lead Developer",
+        "bio": "Expert in VR development with 10+ years of experience in immersive technologies"
+      },
+      "member3": {
+        "name": "Michael Wong",
+        "role": "Clinical Director",
+        "bio": "Licensed therapist specializing in autism spectrum disorders and behavioral interventions"
+      },
+      "member4": {
+        "name": "Emily Park",
+        "role": "UX Designer",
+        "bio": "Creating intuitive and accessible experiences for users of all abilities"
+      },
+      "member5": {
+        "name": "David Martinez",
+        "role": "AI Engineer",
+        "bio": "Developing intelligent systems for adaptive learning and personalized experiences"
+      },
+      "member6": {
+        "name": "Lisa Zhang",
+        "role": "Research Scientist",
+        "bio": "PhD in Cognitive Science, researching effective autism intervention methods"
+      }
+    },
+    "advisors": {
+      "title": "Advisors",
+      "advisor1": {
+        "name": "Dr. Robert Johnson",
+        "role": "Medical Advisor",
+        "bio": "Professor of Pediatrics, leading autism research for over 20 years"
+      },
+      "advisor2": {
+        "name": "Jennifer Lee",
+        "role": "Technology Advisor",
+        "bio": "Former CTO at major tech companies, expert in AR/VR solutions"
+      },
+      "advisor3": {
+        "name": "Dr. Amanda Taylor",
+        "role": "Clinical Advisor",
+        "bio": "Board-certified behavioral analyst with extensive experience in ABA therapy"
+      },
+      "advisor4": {
+        "name": "Thomas Wilson",
+        "role": "Business Advisor",
+        "bio": "Serial entrepreneur with successful exits in healthcare technology"
+      }
+    },
+    "achievements": {
+      "title": "Achievements & Recognition",
+      "award1": {
+        "title": "Best Indie Game 2025",
+        "description": "Recognized for innovation in therapeutic gaming",
+        "year": "2025"
+      },
+      "award2": {
+        "title": "Innovation Award",
+        "description": "Healthcare Technology Innovation Award",
+        "year": "2024"
+      },
+      "award3": {
+        "title": "1M+ Users",
+        "description": "Reached over 1 million active users worldwide",
+        "year": "2025"
+      },
+      "award4": {
+        "title": "Community Choice Award",
+        "description": "Voted by parents and therapists as most effective tool",
+        "year": "2025"
+      },
+      "award5": {
+        "title": "Research Excellence",
+        "description": "Published in leading medical journals",
+        "year": "2024"
+      },
+      "award6": {
+        "title": "Top Startup 2024",
+        "description": "Named one of the most promising health tech startups",
+        "year": "2024"
+      }
+    }
   }
 }

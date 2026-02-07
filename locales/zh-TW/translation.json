@@ -60,5 +60,156 @@
     "privacy": "隱私政策",
     "terms": "服務條款",
     "cookies": "Cookie 政策"
+  },
+  "featuresPage": {
+    "title": "產品特色",
+    "subtitle": "探索驅動我們沉浸式遊戲體驗的創新功能",
+    "keyFeatures": {
+      "title": "主要功能",
+      "immersiveGameplay": {
+        "title": "沉浸式遊戲玩法",
+        "description": "透過尖端VR技術和逼真物理效果體驗前所未有的沉浸感"
+      },
+      "aiPoweredNPCs": {
+        "title": "AI驅動的NPC",
+        "description": "與能適應並自然回應你行動的智能角色互動"
+      },
+      "dynamicEnvironments": {
+        "title": "動態環境",
+        "description": "探索會根據你的選擇和行動而改變和進化的生動世界"
+      },
+      "multiplayerExperience": {
+        "title": "多人遊戲體驗",
+        "description": "與朋友組隊或在無縫線上遊戲中與全球玩家競爭"
+      },
+      "crossPlatform": {
+        "title": "跨平台支援",
+        "description": "隨時隨地在PC、主機和移動設備上遊玩"
+      },
+      "regularUpdates": {
+        "title": "定期更新",
+        "description": "根據社群反饋享受持續的新內容、功能和改進"
+      }
+    },
+    "environments": {
+      "title": "遊戲環境",
+      "forestRealm": {
+        "name": "森林領域",
+        "description": "擁有古老樹木和神秘生物的茂密森林"
+      },
+      "urbanCityscape": {
+        "name": "都市景觀",
+        "description": "擁有高聳摩天大樓和霓虹燈的繁華大都市"
+      },
+      "desertWasteland": {
+        "name": "沙漠荒地",
+        "description": "廣闊的沙質地帶，隱藏著寶藏和危險"
+      },
+      "underwaterWorld": {
+        "name": "水下世界",
+        "description": "探索神秘海洋領域的深處"
+      },
+      "mountainPeaks": {
+        "name": "高山峰頂",
+        "description": "攀登雄偉的山脈並發現隱藏的山谷"
+      },
+      "spaceStation": {
+        "name": "太空站",
+        "description": "在未來主義軌道設施中體驗零重力"
+      }
+    }
+  },
+  "teamPage": {
+    "title": "我們的團隊",
+    "subtitle": "認識AURA背後的優秀人才",
+    "teamMembers": {
+      "title": "團隊成員",
+      "member1": {
+        "name": "劉傑克",
+        "role": "執行長兼創辦人",
+        "bio": "熱衷於透過沉浸式技術為自閉症治療創造創新解決方案"
+      },
+      "member2": {
+        "name": "陳莎拉",
+        "role": "首席開發人員",
+        "bio": "VR開發專家，在沉浸式技術方面擁有10年以上經驗"
+      },
+      "member3": {
+        "name": "王邁克",
+        "role": "臨床主任",
+        "bio": "專門從事自閉症譜系障礙和行為干預的執照治療師"
+      },
+      "member4": {
+        "name": "朴艾米莉",
+        "role": "用戶體驗設計師",
+        "bio": "為所有能力的用戶創造直觀且易於訪問的體驗"
+      },
+      "member5": {
+        "name": "馬丁尼茲大衛",
+        "role": "AI工程師",
+        "bio": "開發用於自適應學習和個性化體驗的智能系統"
+      },
+      "member6": {
+        "name": "張麗莎",
+        "role": "研究科學家",
+        "bio": "認知科學博士，研究有效的自閉症干預方法"
+      }
+    },
+    "advisors": {
+      "title": "顧問",
+      "advisor1": {
+        "name": "羅伯特·約翰遜博士",
+        "role": "醫療顧問",
+        "bio": "兒科教授，領導自閉症研究超過20年"
+      },
+      "advisor2": {
+        "name": "李珍妮",
+        "role": "技術顧問",
+        "bio": "前大型科技公司CTO，AR/VR解決方案專家"
+      },
+      "advisor3": {
+        "name": "泰勒·阿曼達博士",
+        "role": "臨床顧問",
+        "bio": "認證行為分析師，在ABA治療方面擁有豐富經驗"
+      },
+      "advisor4": {
+        "name": "威爾遜·托馬斯",
+        "role": "商業顧問",
+        "bio": "連續創業家，在醫療技術領域成功退出"
+      }
+    },
+    "achievements": {
+      "title": "成就與認可",
+      "award1": {
+        "title": "2025年最佳獨立遊戲",
+        "description": "因治療性遊戲創新而獲得認可",
+        "year": "2025"
+      },
+      "award2": {
+        "title": "創新獎",
+        "description": "醫療技術創新獎",
+        "year": "2024"
+      },
+      "award3": {
+        "title": "100萬+用戶",
+        "description": "全球活躍用戶超過100萬",
+        "year": "2025"
+      },
+      "award4": {
+        "title": "社群選擇獎",
+        "description": "被家長和治療師投票為最有效的工具",
+        "year": "2025"
+      },
+      "award5": {
+        "title": "研究卓越獎",
+        "description": "發表於領先的醫學期刊",
+        "year": "2024"
+      },
+      "award6": {
+        "title": "2024年頂級創業公司",
+        "description": "被評為最有前途的健康科技創業公司之一",
+        "year": "2024"
+      }
+    }
   }
 }

@@ -131,9 +131,15 @@ export function Header() {
                     </MenubarTrigger>
                     <MenubarContent className="w-auto">
                       <MenubarGroup>
-                        <MenubarItem>{t('header.menu.home')}</MenubarItem>
-                        <MenubarItem>{t('header.menu.features')}</MenubarItem>
-                        <MenubarItem>{t('header.menu.team')}</MenubarItem>
+                        <Link href="/">
+                          <MenubarItem>{t('header.menu.home')}</MenubarItem>
+                        </Link>
+                        <Link href="/features">
+                          <MenubarItem>{t('header.menu.features')}</MenubarItem>
+                        </Link>
+                        <Link href="/team">
+                          <MenubarItem>{t('header.menu.team')}</MenubarItem>
+                        </Link>
                         <MenubarItem>{t('header.menu.getStarted')}</MenubarItem>
                       </MenubarGroup>
                       <MenubarSeparator />
