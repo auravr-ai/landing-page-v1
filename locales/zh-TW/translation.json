@@ -7,58 +7,60 @@
       "getStarted": "開始使用"
     },
     "login": "登入",
-    "getStarted": "開始使用"
+    "getStarted": "加入等候名單"
   },
   "hero": {
-    "titleStart": "用",
-    "titleHighlight": "定制軟體",
-    "titleEnd": "轉型您的業務",
-    "description": "我們為您的業務需求量身打造可擴展、高效的軟體解決方案。從網頁應用程式到移動應用程式，我們幫助小型企業透過科技成長。",
-    "consultation": "免費諮詢",
-    "viewWork": "查看我們的作品",
-    "readyToStart": "準備好開始您的專案了嗎？"
+    "titleStart": "推動",
+    "titleHighlight": "沉浸及數據驅動的",
+    "titleEnd": "自閉症治療",
+    "description": "我們為你的業務度身訂造可延展、高效的軟件方案。由網頁到手機應用，助中小企以科技成長。",
+    "consultation": "產品特色",
+    "viewWork": "我們的團隊",
+    "readyToStart": "準備好開始你的項目了嗎？"
   },
   "features": {
-    "title": "為什麼選擇",
-    "titleHighlight": "DevSolutions",
-    "description": "我們提供高品質的軟體解決方案，幫助您的業務在數位世界中成長和成功。",
+    "title": "為何選擇",
+    "titleHighlight": "AURA",
+    "description": "我們提供高質素的軟件方案，助你的業務在數碼世界成長並取得成功。",
     "fastDevelopment": {
       "title": "快速開發",
-      "description": "快速原型設計和敏捷開發流程，讓您的軟體快速進入市場。"
+      "description": "快速原型加敏捷流程，令你的軟件可以更快面世。"
     },
     "scalable": {
-      "title": "可擴展解決方案",
-      "description": "隨著您的業務成長而建構，我們的解決方案隨著您的需求無縫擴展。"
+      "title": "可延展方案",
+      "description": "隨著業務成長而建構，方案可按需要無縫擴充。"
     },
     "modern": {
-      "title": "現代技術",
-      "description": "使用最新技術和最佳實踐，確保您的軟體經得起未來考驗。"
+      "title": "現代科技",
+      "description": "採用最新技術與最佳實踐，確保你的軟件面向未來。"
     }
   },
   "footer": {
-    "description": "用定制軟體解決方案轉型您的業務。我們打造隨著您的成功而成長的可擴展應用程式。",
+    "description": "推動沉浸及數據驅動的自閉症治療。",
+    "links": {
+      "features": "/features",
+      "team": "/team",
+      "email": "mailto:general@auravr.net",
+      "address": "https://maps.google.com/?q=The%20University%20of%20Hong%20Kong%20Pokfulam%20Hong%20Kong"
+    },
     "services": {
       "title": "服務",
-      "web": "網頁開發",
-      "mobile": "移動應用程式",
-      "custom": "定制軟體",
-      "api": "API 開發",
-      "cloud": "雲端解決方案"
+      "features": "產品特色"
     },
     "company": {
       "title": "公司",
       "team": "我們的團隊"
     },
     "contact": {
-      "title": "聯絡方式",
-      "email": "hello@devsolutions.com",
-      "phone": "+1 (555) 123-4567",
-      "address": "科技街 123 號",
-      "city": "舊金山，加州 94105"
+      "title": "聯絡",
+      "email": "general@auravr.net",
+      "phone": "+852 9841 0407",
+      "address": "香港大學",
+      "city": "薄扶林，香港"
     },
-    "copyright": "© 2024 DevSolutions. 版權所有。",
-    "privacy": "隱私政策",
-    "terms": "服務條款",
+    "copyright": "© 2026 AURA. 版權所有。",
+    "privacy": "私隱政策",
+    "terms": "使用條款",
     "cookies": "Cookie 政策"
   },
   "featuresPage": {
@@ -67,148 +69,138 @@
     "keyFeatures": {
       "title": "主要功能",
       "immersiveGameplay": {
-        "title": "沉浸式遊戲玩法",
-        "description": "透過尖端VR技術和逼真物理效果體驗前所未有的沉浸感"
+        "title": "沉浸式遊戲體驗",
+        "description": "透過尖端 VR 技術與逼真物理效果，體驗前所未有的沉浸感"
       },
       "aiPoweredNPCs": {
-        "title": "AI驅動的NPC",
-        "description": "與能適應並自然回應你行動的智能角色互動"
+        "title": "AI 驅動的 NPC",
+        "description": "與能適應並自然回應你行動的智慧角色互動"
       },
       "dynamicEnvironments": {
         "title": "動態環境",
-        "description": "探索會根據你的選擇和行動而改變和進化的生動世界"
+        "description": "探索會因你的選擇和行動而改變、進化的生動世界"
       },
       "multiplayerExperience": {
         "title": "多人遊戲體驗",
-        "description": "與朋友組隊或在無縫線上遊戲中與全球玩家競爭"
+        "description": "與朋友組隊，或在無縫線上遊戲中與全球玩家競爭"
       },
       "crossPlatform": {
         "title": "跨平台支援",
-        "description": "隨時隨地在PC、主機和移動設備上遊玩"
+        "description": "隨時隨地在 PC、主機及手機裝置上遊玩"
       },
       "regularUpdates": {
         "title": "定期更新",
-        "description": "根據社群反饋享受持續的新內容、功能和改進"
+        "description": "按社群回饋持續推出新內容、功能與改進"
       }
     },
     "environments": {
       "title": "遊戲環境",
       "forestRealm": {
-        "name": "森林領域",
-        "description": "擁有古老樹木和神秘生物的茂密森林"
+        "name": "Forest Realm",
+        "description": "滿佈古老樹木與神秘生物的茂密森林"
       },
       "urbanCityscape": {
-        "name": "都市景觀",
-        "description": "擁有高聳摩天大樓和霓虹燈的繁華大都市"
+        "name": "Urban Cityscape",
+        "description": "高樓林立、霓虹閃爍的繁華都會"
       },
       "desertWasteland": {
-        "name": "沙漠荒地",
-        "description": "廣闊的沙質地帶，隱藏著寶藏和危險"
+        "name": "Desert Wasteland",
+        "description": "廣袤沙漠，隱藏著寶藏與危機"
       },
       "underwaterWorld": {
-        "name": "水下世界",
+        "name": "Underwater World",
         "description": "探索神秘海洋領域的深處"
       },
       "mountainPeaks": {
-        "name": "高山峰頂",
-        "description": "攀登雄偉的山脈並發現隱藏的山谷"
+        "name": "Mountain Peaks",
+        "description": "攀登雄偉山脈，發現隱蔽山谷"
       },
       "spaceStation": {
-        "name": "太空站",
-        "description": "在未來主義軌道設施中體驗零重力"
+        "name": "Space Station",
+        "description": "在未來感的軌道設施中體驗失重"
       }
     }
   },
   "teamPage": {
     "title": "我們的團隊",
-    "subtitle": "認識AURA背後的優秀人才",
+    "subtitle": "認識 AURA 背後的優秀人才",
     "teamMembers": {
       "title": "團隊成員",
       "member1": {
-        "name": "劉傑克",
-        "role": "執行長兼創辦人",
-        "bio": "熱衷於透過沉浸式技術為自閉症治療創造創新解決方案"
+        "name": "Jake Liu",
+        "role": "共同創辦人兼執行長",
+        "bio": "香港大學數學及創業背景，擅長業務拓展"
       },
       "member2": {
-        "name": "陳莎拉",
-        "role": "首席開發人員",
-        "bio": "VR開發專家，在沉浸式技術方面擁有10年以上經驗"
+        "name": "Victor Chui",
+        "role": "共同創辦人兼技術長",
+        "bio": "香港大學計算機科學，擅長遊戲開發與 AI 系統"
       },
       "member3": {
-        "name": "王邁克",
-        "role": "臨床主任",
-        "bio": "專門從事自閉症譜系障礙和行為干預的執照治療師"
+        "name": "Alison Li",
+        "role": "共同創辦人兼產品長",
+        "bio": "理大職業治療背景，專注自閉症治療"
       },
       "member4": {
-        "name": "朴艾米莉",
-        "role": "用戶體驗設計師",
-        "bio": "為所有能力的用戶創造直觀且易於訪問的體驗"
+        "name": "Kitty Sham",
+        "role": "研究經理",
+        "bio": "香港大學醫學背景，專長兒科"
       },
       "member5": {
-        "name": "馬丁尼茲大衛",
-        "role": "AI工程師",
-        "bio": "開發用於自適應學習和個性化體驗的智能系統"
+        "name": "Amy Lee",
+        "role": "研究主任",
+        "bio": "香港大學言語及聽覺科學背景，擅長自閉症評估"
       },
       "member6": {
-        "name": "張麗莎",
-        "role": "研究科學家",
-        "bio": "認知科學博士，研究有效的自閉症干預方法"
+        "name": "Fung Pun",
+        "role": "軟件開發人員",
+        "bio": "香港大學計算機科學，擅長全端開發"
       }
     },
     "advisors": {
       "title": "顧問",
       "advisor1": {
-        "name": "羅伯特·約翰遜博士",
-        "role": "醫療顧問",
-        "bio": "兒科教授，領導自閉症研究超過20年"
+        "name": "Prof. Yvonne Han",
+        "role": "研究顧問",
+        "bio": "理大職業治療課程主任"
       },
       "advisor2": {
-        "name": "李珍妮",
-        "role": "技術顧問",
-        "bio": "前大型科技公司CTO，AR/VR解決方案專家"
+        "name": "Prof. Kathy Shum",
+        "role": "研究顧問",
+        "bio": "香港大學心理學副教授"
       },
       "advisor3": {
-        "name": "泰勒·阿曼達博士",
-        "role": "臨床顧問",
-        "bio": "認證行為分析師，在ABA治療方面擁有豐富經驗"
+        "name": "Prof. Will Chien",
+        "role": "研究顧問",
+        "bio": "理大職業治療副教授"
       },
       "advisor4": {
-        "name": "威爾遜·托馬斯",
-        "role": "商業顧問",
-        "bio": "連續創業家，在醫療技術領域成功退出"
+        "name": "Mr. Johnny Lam",
+        "role": "臨床顧問",
+        "bio": "資深兒科職業治療師"
+      },
+      "advisor5": {
+        "name": "Mr. Eddie Lui",
+        "role": "臨床顧問",
+        "bio": "執業兒科職業治療師"
       }
     },
     "achievements": {
       "title": "成就與認可",
       "award1": {
-        "title": "2025年最佳獨立遊戲",
-        "description": "因治療性遊戲創新而獲得認可",
+        "title": "Alibaba JUMPSTARTER ZPIRE",
+        "description": "Top 30（角逐 Top 5 中）",
         "year": "2025"
       },
       "award2": {
-        "title": "創新獎",
-        "description": "醫療技術創新獎",
-        "year": "2024"
+        "title": "HK Techathon+",
+        "description": "生命科學與醫療保健優異獎",
+        "year": "2026"
       },
       "award3": {
-        "title": "100萬+用戶",
-        "description": "全球活躍用戶超過100萬",
-        "year": "2025"
-      },
-      "award4": {
-        "title": "社群選擇獎",
-        "description": "被家長和治療師投票為最有效的工具",
-        "year": "2025"
-      },
-      "award5": {
-        "title": "研究卓越獎",
-        "description": "發表於領先的醫學期刊",
-        "year": "2024"
-      },
-      "award6": {
-        "title": "2024年頂級創業公司",
-        "description": "被評為最有前途的健康科技創業公司之一",
-        "year": "2024"
+        "title": "HKSTP Ideation",
+        "description": "參與者",
+        "year": "2026"
       }
     }
   }

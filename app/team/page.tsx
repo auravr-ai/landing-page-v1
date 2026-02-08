@@ -30,123 +30,69 @@ const containerVariants = {
   }
 }
 
+const honorificPrefixes = ["mr", "mr.", "mrs", "mrs.", "ms", "ms.", "dr", "dr.", "prof", "prof.", "sir", "dame"]
+
+const teamAvatarColors = ["bg-orange-500", "bg-blue-500", "bg-green-500", "bg-purple-500", "bg-red-500", "bg-teal-500"]
+const advisorAvatarColors = ["bg-indigo-500", "bg-pink-500", "bg-yellow-500", "bg-cyan-500", "bg-emerald-500", "bg-amber-500"]
+const achievementIcons = [Trophy, Award, UsersIcon, Star, BookOpen, TrendingUp]
+
+function getInitials(name: string) {
+  if (!name) return ""
+
+  const parts = name
+    .trim()
+    .split(/\s+/)
+    .filter((part, index) => !(index === 0 && honorificPrefixes.includes(part.toLowerCase())))
+
+  const letters = parts
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0]?.toUpperCase() ?? "")
+    .filter(Boolean)
+
+  if (letters.length === 0) return ""
+  if (letters.length === 1) return letters[0]
+  return `${letters[0]}${letters[1]}`
+}
+
 export default function TeamPage() {
   const { t } = useTranslation()
 
-  const teamMembers = [
-    {
-      name: t('teamPage.teamMembers.member1.name'),
-      role: t('teamPage.teamMembers.member1.role'),
-      bio: t('teamPage.teamMembers.member1.bio'),
-      initials: 'JL',
-      avatarColor: 'bg-orange-500'
-    },
-    {
-      name: t('teamPage.teamMembers.member2.name'),
-      role: t('teamPage.teamMembers.member2.role'),
-      bio: t('teamPage.teamMembers.member2.bio'),
-      initials: 'SC',
-      avatarColor: 'bg-blue-500'
-    },
-    {
-      name: t('teamPage.teamMembers.member3.name'),
-      role: t('teamPage.teamMembers.member3.role'),
-      bio: t('teamPage.teamMembers.member3.bio'),
-      initials: 'MW',
-      avatarColor: 'bg-green-500'
-    },
-    {
-      name: t('teamPage.teamMembers.member4.name'),
-      role: t('teamPage.teamMembers.member4.role'),
-      bio: t('teamPage.teamMembers.member4.bio'),
-      initials: 'EP',
-      avatarColor: 'bg-purple-500'
-    },
-    {
-      name: t('teamPage.teamMembers.member5.name'),
-      role: t('teamPage.teamMembers.member5.role'),
-      bio: t('teamPage.teamMembers.member5.bio'),
-      initials: 'DM',
-      avatarColor: 'bg-red-500'
-    },
-    {
-      name: t('teamPage.teamMembers.member6.name'),
-      role: t('teamPage.teamMembers.member6.role'),
-      bio: t('teamPage.teamMembers.member6.bio'),
-      initials: 'LZ',
-      avatarColor: 'bg-teal-500'
-    },
-  ]
+  const teamMembers = React.useMemo(() => {
+    const data = t("teamPage.teamMembers", { returnObjects: true }) as Record<string, any>
+    if (!data) return []
 
-  const advisors = [
-    {
-      name: t('teamPage.advisors.advisor1.name'),
-      role: t('teamPage.advisors.advisor1.role'),
-      bio: t('teamPage.advisors.advisor1.bio'),
-      initials: 'RJ',
-      avatarColor: 'bg-indigo-500'
-    },
-    {
-      name: t('teamPage.advisors.advisor2.name'),
-      role: t('teamPage.advisors.advisor2.role'),
-      bio: t('teamPage.advisors.advisor2.bio'),
-      initials: 'JL',
-      avatarColor: 'bg-pink-500'
-    },
-    {
-      name: t('teamPage.advisors.advisor3.name'),
-      role: t('teamPage.advisors.advisor3.role'),
-      bio: t('teamPage.advisors.advisor3.bio'),
-      initials: 'AT',
-      avatarColor: 'bg-yellow-500'
-    },
-    {
-      name: t('teamPage.advisors.advisor4.name'),
-      role: t('teamPage.advisors.advisor4.role'),
-      bio: t('teamPage.advisors.advisor4.bio'),
-      initials: 'TW',
-      avatarColor: 'bg-cyan-500'
-    },
-  ]
+    return Object.entries(data)
+      .filter(([key]) => key !== "title")
+      .map(([, member], index) => ({
+        ...member,
+        avatarColor: teamAvatarColors[index % teamAvatarColors.length],
+      }))
+  }, [t])
 
-  const achievements = [
-    {
-      icon: Trophy,
-      title: t('teamPage.achievements.award1.title'),
-      description: t('teamPage.achievements.award1.description'),
-      year: t('teamPage.achievements.award1.year'),
-    },
-    {
-      icon: Award,
-      title: t('teamPage.achievements.award2.title'),
-      description: t('teamPage.achievements.award2.description'),
-      year: t('teamPage.achievements.award2.year'),
-    },
-    {
-      icon: UsersIcon,
-      title: t('teamPage.achievements.award3.title'),
-      description: t('teamPage.achievements.award3.description'),
-      year: t('teamPage.achievements.award3.year'),
-    },
-    {
-      icon: Star,
-      title: t('teamPage.achievements.award4.title'),
-      description: t('teamPage.achievements.award4.description'),
-      year: t('teamPage.achievements.award4.year'),
-    },
-    {
-      icon: BookOpen,
-      title: t('teamPage.achievements.award5.title'),
-      description: t('teamPage.achievements.award5.description'),
-      year: t('teamPage.achievements.award5.year'),
-    },
-    {
-      icon: TrendingUp,
-      title: t('teamPage.achievements.award6.title'),
-      description: t('teamPage.achievements.award6.description'),
-      year: t('teamPage.achievements.award6.year'),
-    },
-  ]
+  const advisors = React.useMemo(() => {
+    const data = t("teamPage.advisors", { returnObjects: true }) as Record<string, any>
+    if (!data) return []
+
+    return Object.entries(data)
+      .filter(([key]) => key !== "title")
+      .map(([, advisor], index) => ({
+        ...advisor,
+        avatarColor: advisorAvatarColors[index % advisorAvatarColors.length],
+      }))
+  }, [t])
+
+  const achievements = React.useMemo(() => {
+    const data = t("teamPage.achievements", { returnObjects: true }) as Record<string, any>
+    if (!data) return []
+
+    return Object.entries(data)
+      .filter(([key]) => key !== "title")
+      .map(([, achievement], index) => ({
+        ...achievement,
+        icon: achievementIcons[index % achievementIcons.length],
+      }))
+  }, [t])
 
   return (
     <main className="overflow-hidden">
@@ -203,7 +149,7 @@ export default function TeamPage() {
                     <Avatar className="w-24 h-24 mx-auto mb-4 border-2 border-orange-200 group-hover:border-orange-500 transition-colors">
                       <AvatarImage src="" alt={member.name} />
                       <AvatarFallback className={cn(member.avatarColor, "text-white text-xl font-semibold")}>
-                        {member.initials}
+                        {getInitials(member.name)}
                       </AvatarFallback>
                     </Avatar>
                     <h3 className="text-xl font-semibold">{member.name}</h3>
@@ -239,29 +185,28 @@ export default function TeamPage() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {advisors.map((advisor, index) => (
               <motion.div key={index} variants={fadeInVariants}>
                 <Card 
                   className={cn(
                     "group h-full border-orange-200 hover:border-orange-500 transition-all duration-300",
-                    "hover:shadow-lg hover:shadow-orange-500/20",
-                    "border-2"
+                    "hover:shadow-lg hover:shadow-orange-500/20"
                   )}
                 >
                   <CardHeader className="text-center">
-                    <Avatar className="w-20 h-20 mx-auto mb-4 border-2 border-orange-200 group-hover:border-orange-500 transition-colors">
+                    <Avatar className="w-24 h-24 mx-auto mb-4 border-2 border-orange-200 group-hover:border-orange-500 transition-colors">
                       <AvatarImage src="" alt={advisor.name} />
-                      <AvatarFallback className={cn(advisor.avatarColor, "text-white text-lg font-semibold")}>
-                        {advisor.initials}
+                      <AvatarFallback className={cn(advisor.avatarColor, "text-white text-xl font-semibold")}>
+                        {getInitials(advisor.name)}
                       </AvatarFallback>
                     </Avatar>
-                    <h3 className="text-lg font-semibold">{advisor.name}</h3>
-                    <p className="text-xs text-orange-500 font-medium">{advisor.role}</p>
+                    <h3 className="text-xl font-semibold">{advisor.name}</h3>
+                    <p className="text-sm text-orange-500 font-medium">{advisor.role}</p>
                   </CardHeader>
                   <CardContent className="text-center">
-                    <p className="text-xs text-muted-foreground">{advisor.bio}</p>
+                    <p className="text-sm text-muted-foreground">{advisor.bio}</p>
                   </CardContent>
                 </Card>
               </motion.div>

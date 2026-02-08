@@ -37,13 +37,15 @@
   },
   "footer": {
     "description": "Enabling immersive and data driven autism treatment.",
+    "links": {
+      "features": "/features",
+      "team": "/team",
+      "email": "mailto:general@auravr.net",
+      "address": "https://maps.google.com/?q=The%20University%20of%20Hong%20Kong%20Pokfulam%20Hong%20Kong"
+    },
     "services": {
       "title": "Services",
-      "web": "Web Development",
-      "mobile": "Mobile Apps",
-      "custom": "Custom Software",
-      "api": "API Development",
-      "cloud": "Cloud Solutions"
+      "features": "Product Features"
     },
     "company": {
       "title": "Company",
@@ -126,89 +128,79 @@
       "title": "Team Members",
       "member1": {
         "name": "Jake Liu",
-        "role": "CEO & Founder",
-        "bio": "Passionate about creating innovative solutions for autism treatment through immersive technology"
+        "role": "Co-Founder & CEO",
+        "bio": "HKU Mathematics & Entrepreneurship, Experienced in Business Development"
       },
       "member2": {
-        "name": "Sarah Chen",
-        "role": "Lead Developer",
-        "bio": "Expert in VR development with 10+ years of experience in immersive technologies"
+        "name": "Victor Chui",
+        "role": "Co-Founder & CTO",
+        "bio": "HKU Computer Science, Experienced in Game Development and AI Systems"
       },
       "member3": {
-        "name": "Michael Wong",
-        "role": "Clinical Director",
-        "bio": "Licensed therapist specializing in autism spectrum disorders and behavioral interventions"
+        "name": "Alison Li",
+        "role": "Co-Founder & CPO",
+        "bio": "PolyU Occupational Therapy, Experienced in Autism Treatment"
       },
       "member4": {
-        "name": "Emily Park",
-        "role": "UX Designer",
-        "bio": "Creating intuitive and accessible experiences for users of all abilities"
+        "name": "Kitty Sham",
+        "role": "Research Manager",
+        "bio": "HKU Medicine, Experienced in Paediatrics"
       },
       "member5": {
-        "name": "David Martinez",
-        "role": "AI Engineer",
-        "bio": "Developing intelligent systems for adaptive learning and personalized experiences"
+        "name": "Amy Lee",
+        "role": "Research Officer",
+        "bio": "HKU Speech and Hearing Sciences, Experienced in Autism Assessment"
       },
       "member6": {
-        "name": "Lisa Zhang",
-        "role": "Research Scientist",
-        "bio": "PhD in Cognitive Science, researching effective autism intervention methods"
+        "name": "Fung Pun",
+        "role": "Software Developer",
+        "bio": "HKU Computer Science, Experienced in Full Stack Development"
       }
     },
     "advisors": {
       "title": "Advisors",
       "advisor1": {
-        "name": "Dr. Robert Johnson",
-        "role": "Medical Advisor",
-        "bio": "Professor of Pediatrics, leading autism research for over 20 years"
+        "name": "Prof. Yvonne Han",
+        "role": "Research Advisor",
+        "bio": "Program Leader at PolyU Occupational Therapy "
       },
       "advisor2": {
-        "name": "Jennifer Lee",
-        "role": "Technology Advisor",
-        "bio": "Former CTO at major tech companies, expert in AR/VR solutions"
+        "name": "Prof. Kathy Shum",
+        "role": "Research Advisor",
+        "bio": "Associate Professor at HKU Psychology"
       },
       "advisor3": {
-        "name": "Dr. Amanda Taylor",
-        "role": "Clinical Advisor",
-        "bio": "Board-certified behavioral analyst with extensive experience in ABA therapy"
+        "name": "Prof. Will Chien",
+        "role": "Research Advisor",
+        "bio": "Associate Professor at PolyU Occupational Therapy"
       },
       "advisor4": {
-        "name": "Thomas Wilson",
-        "role": "Business Advisor",
-        "bio": "Serial entrepreneur with successful exits in healthcare technology"
+        "name": "Mr. Johnny Lam",
+        "role": "Clinical Advisor",
+        "bio": "Seasoned Paediatrics OT"
+      },
+      "advisor5": {
+        "name": "Mr. Eddie Lui",
+        "role": "Clinical Advisor",
+        "bio": "Paediatrics OT of Practice"
       }
     },
     "achievements": {
       "title": "Achievements & Recognition",
       "award1": {
-        "title": "Best Indie Game 2025",
-        "description": "Recognized for innovation in therapeutic gaming",
+        "title": "Alibaba JUMPSTARTER ZPIRE",
+        "description": "Top 30 (in progress to Top 5)",
         "year": "2025"
       },
       "award2": {
-        "title": "Innovation Award",
-        "description": "Healthcare Technology Innovation Award",
-        "year": "2024"
+        "title": "HK Techathon+",
+        "description": "Merit in Life Science & Healthcare",
+        "year": "2026"
       },
       "award3": {
-        "title": "1M+ Users",
-        "description": "Reached over 1 million active users worldwide",
-        "year": "2025"
-      },
-      "award4": {
-        "title": "Community Choice Award",
-        "description": "Voted by parents and therapists as most effective tool",
-        "year": "2025"
-      },
-      "award5": {
-        "title": "Research Excellence",
-        "description": "Published in leading medical journals",
-        "year": "2024"
-      },
-      "award6": {
-        "title": "Top Startup 2024",
-        "description": "Named one of the most promising health tech startups",
-        "year": "2024"
+        "title": "HKSTP Ideation",
+        "description": "Participant",
+        "year": "2026"
       }
     }
   }
