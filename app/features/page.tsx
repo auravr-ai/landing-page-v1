@@ -1,13 +1,14 @@
 "use client"
 
 import * as React from "react"
-import { 
-  Gamepad2, 
-  Bot, 
-  Globe, 
-  Users, 
-  Monitor, 
-  Sparkles 
+import {
+  Gamepad2,
+  Bot,
+  Globe,
+  Users,
+  Monitor,
+  Sparkles,
+  type LucideIcon
 } from "lucide-react"
 import { motion } from "framer-motion"
 import { useTranslation } from "react-i18next"
@@ -45,40 +46,45 @@ const containerVariants = {
 }
 
 export default function FeaturesPage() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
-  const features = [
-    {
-      icon: Gamepad2,
-      title: t('featuresPage.keyFeatures.immersiveGameplay.title'),
-      description: t('featuresPage.keyFeatures.immersiveGameplay.description'),
-    },
-    {
-      icon: Bot,
-      title: t('featuresPage.keyFeatures.aiPoweredNPCs.title'),
-      description: t('featuresPage.keyFeatures.aiPoweredNPCs.description'),
-    },
-    {
-      icon: Globe,
-      title: t('featuresPage.keyFeatures.dynamicEnvironments.title'),
-      description: t('featuresPage.keyFeatures.dynamicEnvironments.description'),
-    },
-    {
-      icon: Users,
-      title: t('featuresPage.keyFeatures.multiplayerExperience.title'),
-      description: t('featuresPage.keyFeatures.multiplayerExperience.description'),
-    },
-    {
-      icon: Monitor,
-      title: t('featuresPage.keyFeatures.crossPlatform.title'),
-      description: t('featuresPage.keyFeatures.crossPlatform.description'),
-    },
-    {
-      icon: Sparkles,
-      title: t('featuresPage.keyFeatures.regularUpdates.title'),
-      description: t('featuresPage.keyFeatures.regularUpdates.description'),
-    },
+  const iconByKey: Record<string, LucideIcon> = {
+    immersiveGameplay: Gamepad2,
+    aiPoweredNPCs: Bot,
+    dynamicEnvironments: Globe,
+    multiplayerExperience: Users,
+    crossPlatform: Monitor,
+    regularUpdates: Sparkles,
+  }
+
+  const fallbackIcons: LucideIcon[] = [
+    Gamepad2,
+    Bot,
+    Globe,
+    Users,
+    Monitor,
+    Sparkles,
   ]
+
+  const features = React.useMemo(() => {
+    const bundle = i18n.getResourceBundle(i18n.language, "translation") as
+      | { featuresPage?: { keyFeatures?: Record<string, unknown> } }
+      | undefined
+
+    const keyFeatures = bundle?.featuresPage?.keyFeatures ?? {}
+
+    return Object.entries(keyFeatures)
+      .filter(([key, value]) => key !== "title" && typeof value === "object")
+      .map(([key], index) => {
+        const icon = iconByKey[key] ?? fallbackIcons[index % fallbackIcons.length]
+
+        return {
+          icon,
+          title: t(`featuresPage.keyFeatures.${key}.title`),
+          description: t(`featuresPage.keyFeatures.${key}.description`),
+        }
+      })
+  }, [i18n, t])
 
   const environments = [
     {
@@ -160,13 +166,13 @@ export default function FeaturesPage() {
               <motion.div key={index} variants={fadeInVariants}>
                 <Card 
                   className={cn(
-                    "group h-full border-orange-200 hover:border-orange-500 transition-all duration-300",
-                    "hover:shadow-lg hover:shadow-orange-500/20"
+                    "group h-full border-purple-300 hover:border-purple-600 transition-all duration-300",
+                    "hover:shadow-lg hover:shadow-purple-600/20"
                   )}
                 >
                   <CardHeader>
-                    <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-orange-100 dark:bg-orange-900/30 mb-4">
-                      <feature.icon className="w-6 h-6 text-orange-500" />
+                    <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-900/30 mb-4">
+                      <feature.icon className="w-6 h-6 text-purple-600" />
                     </div>
                     <h3 className="text-xl font-semibold">{feature.title}</h3>
                   </CardHeader>
@@ -208,7 +214,7 @@ export default function FeaturesPage() {
               <CarouselContent>
                 {environments.map((env, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <Card className="border-orange-200 overflow-hidden group">
+                    <Card className="border-purple-300 overflow-hidden group">
                       <div className={cn(
                         "relative h-48 bg-gradient-to-br",
                         env.gradient,
@@ -226,8 +232,8 @@ export default function FeaturesPage() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="border-orange-200 hover:bg-orange-50 hover:border-orange-500" />
-              <CarouselNext className="border-orange-200 hover:bg-orange-50 hover:border-orange-500" />
+              <CarouselPrevious className="border-purple-300 hover:bg-purple-50 hover:border-purple-600" />
+              <CarouselNext className="border-purple-300 hover:bg-purple-50 hover:border-purple-600" />
               <CarouselDots count={environments.length} />
             </Carousel>
           </motion.div>

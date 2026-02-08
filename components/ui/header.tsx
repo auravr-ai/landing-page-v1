@@ -122,51 +122,52 @@ export function Header() {
           )}
         >
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-0">
-            <div className="flex w-full justify-between lg:w-auto">
-              <Link href="/" aria-label="home" className="flex items-center space-x-2">
-                <Menubar>
-                  <MenubarMenu>
-                    <MenubarTrigger>
-                      <Menu className="h-5 w-5" />
-                    </MenubarTrigger>
-                    <MenubarContent className="w-auto">
-                      <MenubarGroup>
-                        <Link href="/">
-                          <MenubarItem>{t('header.menu.home')}</MenubarItem>
-                        </Link>
-                        <Link href="/features">
-                          <MenubarItem>{t('header.menu.features')}</MenubarItem>
-                        </Link>
-                        <Link href="/team">
-                          <MenubarItem>{t('header.menu.team')}</MenubarItem>
-                        </Link>
-                        <MenubarItem>{t('header.menu.getStarted')}</MenubarItem>
-                      </MenubarGroup>
-                      <MenubarSeparator />
-                      <MenubarGroup>
-                        <div className="grid w-full grid-cols-2 gap-2">
-                          <MenubarItem
-                            className="justify-center"
-                            onClick={toggleTheme}
-                            aria-label="Toggle theme"
-                            >
-                            {resolvedTheme === "dark" ? (
-                              <Sun className="size-4" />
-                            ) : (
-                              <Moon className="size-4" />
-                            )}
-                          </MenubarItem>
-                          <MenubarItem
-                            className="justify-center"
-                            onClick={toggleLanguage}
+            <div className="flex w-full items-center justify-between gap-3 lg:w-auto">
+              <Menubar>
+                <MenubarMenu>
+                  <MenubarTrigger>
+                    <Menu className="h-5 w-5" />
+                  </MenubarTrigger>
+                  <MenubarContent className="w-auto">
+                    <MenubarGroup>
+                      <Link href="/">
+                        <MenubarItem>{t('header.menu.home')}</MenubarItem>
+                      </Link>
+                      <Link href="/features">
+                        <MenubarItem>{t('header.menu.features')}</MenubarItem>
+                      </Link>
+                      <Link href="/team">
+                        <MenubarItem>{t('header.menu.team')}</MenubarItem>
+                      </Link>
+                      <MenubarItem>{t('header.menu.getStarted')}</MenubarItem>
+                    </MenubarGroup>
+                    <MenubarSeparator />
+                    <MenubarGroup>
+                      <div className="grid w-full grid-cols-2 gap-2">
+                        <MenubarItem
+                          className="justify-center"
+                          onClick={toggleTheme}
+                          aria-label="Toggle theme"
                           >
-                            {i18n.language === "en" ? "中文" : "EN"}
-                          </MenubarItem>
-                        </div>
-                      </MenubarGroup>
-                    </MenubarContent>
-                  </MenubarMenu>
-                </Menubar>
+                          {resolvedTheme === "dark" ? (
+                            <Sun className="size-4" />
+                          ) : (
+                            <Moon className="size-4" />
+                          )}
+                        </MenubarItem>
+                        <MenubarItem
+                          className="justify-center"
+                          onClick={toggleLanguage}
+                        >
+                          {i18n.language === "en" ? "中文" : "EN"}
+                        </MenubarItem>
+                      </div>
+                    </MenubarGroup>
+                  </MenubarContent>
+                </MenubarMenu>
+              </Menubar>
+
+              <Link href="/" aria-label="home" className="flex items-center space-x-2">
                 <Logo />
               </Link>
 
@@ -196,7 +197,7 @@ export function Header() {
                 </Button>
                 <Button
                   size="sm"
-                  className="bg-orange-500 hover:bg-orange-600"
+                  className="bg-purple-600 hover:bg-purple-700"
                 >
                   <span>{t('header.getStarted')}</span>
                 </Button> 

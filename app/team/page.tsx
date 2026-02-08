@@ -32,7 +32,7 @@ const containerVariants = {
 
 const honorificPrefixes = ["mr", "mr.", "mrs", "mrs.", "ms", "ms.", "dr", "dr.", "prof", "prof.", "sir", "dame"]
 
-const teamAvatarColors = ["bg-orange-500", "bg-blue-500", "bg-green-500", "bg-purple-500", "bg-red-500", "bg-teal-500"]
+const teamAvatarColors = ["bg-purple-600", "bg-blue-500", "bg-green-500", "bg-violet-500", "bg-red-500", "bg-teal-500"]
 const advisorAvatarColors = ["bg-indigo-500", "bg-pink-500", "bg-yellow-500", "bg-cyan-500", "bg-emerald-500", "bg-amber-500"]
 const achievementIcons = [Trophy, Award, UsersIcon, Star, BookOpen, TrendingUp]
 
@@ -141,19 +141,19 @@ export default function TeamPage() {
               <motion.div key={index} variants={fadeInVariants}>
                 <Card 
                   className={cn(
-                    "group h-full border-orange-200 hover:border-orange-500 transition-all duration-300",
-                    "hover:shadow-lg hover:shadow-orange-500/20"
+                    "group h-full border-purple-300 hover:border-purple-600 transition-all duration-300",
+                    "hover:shadow-lg hover:shadow-purple-600/20"
                   )}
                 >
                   <CardHeader className="text-center">
-                    <Avatar className="w-24 h-24 mx-auto mb-4 border-2 border-orange-200 group-hover:border-orange-500 transition-colors">
+                    <Avatar className="w-24 h-24 mx-auto mb-4 border-2 border-purple-300 group-hover:border-purple-600 transition-colors">
                       <AvatarImage src="" alt={member.name} />
                       <AvatarFallback className={cn(member.avatarColor, "text-white text-xl font-semibold")}>
                         {getInitials(member.name)}
                       </AvatarFallback>
                     </Avatar>
                     <h3 className="text-xl font-semibold">{member.name}</h3>
-                    <p className="text-sm text-orange-500 font-medium">{member.role}</p>
+                    <p className="text-sm text-purple-600 font-medium">{member.role}</p>
                   </CardHeader>
                   <CardContent className="text-center">
                     <p className="text-sm text-muted-foreground">{member.bio}</p>
@@ -191,19 +191,19 @@ export default function TeamPage() {
               <motion.div key={index} variants={fadeInVariants}>
                 <Card 
                   className={cn(
-                    "group h-full border-orange-200 hover:border-orange-500 transition-all duration-300",
-                    "hover:shadow-lg hover:shadow-orange-500/20"
+                    "group h-full border-purple-300 hover:border-purple-600 transition-all duration-300",
+                    "hover:shadow-lg hover:shadow-purple-600/20"
                   )}
                 >
                   <CardHeader className="text-center">
-                    <Avatar className="w-24 h-24 mx-auto mb-4 border-2 border-orange-200 group-hover:border-orange-500 transition-colors">
+                    <Avatar className="w-24 h-24 mx-auto mb-4 border-2 border-purple-300 group-hover:border-purple-600 transition-colors">
                       <AvatarImage src="" alt={advisor.name} />
                       <AvatarFallback className={cn(advisor.avatarColor, "text-white text-xl font-semibold")}>
                         {getInitials(advisor.name)}
                       </AvatarFallback>
                     </Avatar>
                     <h3 className="text-xl font-semibold">{advisor.name}</h3>
-                    <p className="text-sm text-orange-500 font-medium">{advisor.role}</p>
+                    <p className="text-sm text-purple-600 font-medium">{advisor.role}</p>
                   </CardHeader>
                   <CardContent className="text-center">
                     <p className="text-sm text-muted-foreground">{advisor.bio}</p>
@@ -241,16 +241,16 @@ export default function TeamPage() {
               <motion.div key={index} variants={fadeInVariants}>
                 <Card 
                   className={cn(
-                    "group h-full border-orange-200 hover:border-orange-500 transition-all duration-300",
-                    "hover:shadow-lg hover:shadow-orange-500/20"
+                    "group h-full border-purple-300 hover:border-purple-600 transition-all duration-300",
+                    "hover:shadow-lg hover:shadow-purple-600/20"
                   )}
                 >
                   <CardHeader>
-                    <div className="flex items-center justify-center w-16 h-16 rounded-full bg-orange-100 dark:bg-orange-900/30 mb-4 mx-auto">
-                      <achievement.icon className="w-8 h-8 text-orange-500" />
+                    <div className="flex items-center justify-center w-16 h-16 rounded-full bg-purple-100 dark:bg-purple-900/30 mb-4 mx-auto">
+                      <achievement.icon className="w-8 h-8 text-purple-600" />
                     </div>
                     <h3 className="text-xl font-semibold text-center">{achievement.title}</h3>
-                    <p className="text-sm text-orange-500 font-medium text-center">{achievement.year}</p>
+                    <p className="text-sm text-purple-600 font-medium text-center">{achievement.year}</p>
                   </CardHeader>
                   <CardContent className="text-center">
                     <p className="text-sm text-muted-foreground">{achievement.description}</p>

@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import Link from "next/link"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 import { ArrowRight, ChevronRight, Zap, Settings2, Sparkles } from "lucide-react"
@@ -136,7 +137,7 @@ const CardDecorator = ({ children }: { children: React.ReactNode }) => (
     className="relative mx-auto size-36 [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"
   >
     <div className="absolute inset-0 [--border:black] dark:[--border:white] bg-[linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] bg-[size:24px_24px] opacity-10" />
-    <div className="bg-background absolute inset-0 m-auto flex size-12 items-center justify-center border-t border-l border-orange-200">
+    <div className="bg-background absolute inset-0 m-auto flex size-12 items-center justify-center border-t border-l border-purple-300">
       {children}
     </div>
   </div>
@@ -180,8 +181,8 @@ export default function SoftwareDevelopmentWebsite() {
           aria-hidden
           className="z-[2] absolute inset-0 pointer-events-none isolate opacity-50 contain-strict hidden lg:block"
         >
-          <div className="w-[35rem] h-[80rem] -translate-y-[350px] absolute left-0 top-0 -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,hsla(25,100%,50%,.08)_0,hsla(25,100%,45%,.02)_50%,hsla(25,100%,40%,0)_80%)]" />
-          <div className="h-[80rem] absolute left-0 top-0 w-56 -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,hsla(25,100%,50%,.06)_0,hsla(25,100%,45%,.02)_80%,transparent_100%)] [translate:5%_-50%]" />
+          <div className="w-[35rem] h-[80rem] -translate-y-[350px] absolute left-0 top-0 -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,hsla(270,100%,50%,.08)_0,hsla(270,100%,45%,.02)_50%,hsla(270,100%,40%,0)_80%)]" />
+          <div className="h-[80rem] absolute left-0 top-0 w-56 -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,hsla(270,100%,50%,.06)_0,hsla(270,100%,45%,.02)_80%,transparent_100%)] [translate:5%_-50%]" />
         </div>
 
         <section>
@@ -195,7 +196,7 @@ export default function SoftwareDevelopmentWebsite() {
                 <AnimatedGroup variants={transitionVariants}>
                   <h1 className="mt-8 max-w-5xl mx-auto text-balance text-6xl md:text-7xl lg:mt-16 xl:text-[5.25rem]">
                     {t('hero.titleStart')}{" "}
-                    <span className="inline-block text-orange-500 text-6xl md:text-7xl xl:text-[5.25rem] font-semibold">
+                    <span className="inline-block text-purple-600 text-6xl md:text-7xl xl:text-[5.25rem] font-semibold">
                       {t('hero.titleHighlight')}
                     </span>
                     {t('hero.titleEnd') && ` ${t('hero.titleEnd')}`}
@@ -219,13 +220,23 @@ export default function SoftwareDevelopmentWebsite() {
                   }}
                   className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row"
                 >
-                  <div key={1} className="bg-orange-500/10 rounded-[14px] border border-orange-200 p-0.5">
-                    <Button size="lg" className="rounded-xl px-5 text-base bg-orange-500 hover:bg-orange-600">
-                      <span className="text-nowrap">{t('hero.consultation')}</span>
+                  <div key={1} className="bg-purple-600/10 rounded-[14px] border border-purple-300 p-0.5">
+                    <Button asChild size="lg" className="rounded-xl px-5 text-base bg-purple-600 hover:bg-purple-700">
+                      <Link href="/features">
+                        <span className="text-nowrap">{t('hero.consultation')}</span>
+                      </Link>
                     </Button>
                   </div>
-                  <Button key={2} size="lg" variant="ghost" className="h-10.5 rounded-xl px-5 hover:text-orange-500">
-                    <span className="text-nowrap">{t('hero.viewWork')}</span>
+                  <Button
+                    key={2}
+                    asChild
+                    size="lg"
+                    variant="ghost"
+                    className="h-10.5 rounded-xl px-5 hover:text-purple-600"
+                  >
+                    <Link href="/team">
+                      <span className="text-nowrap">{t('hero.viewWork')}</span>
+                    </Link>
                   </Button>
                 </AnimatedGroup>
               </div>
@@ -249,9 +260,9 @@ export default function SoftwareDevelopmentWebsite() {
                   aria-hidden
                   className="bg-gradient-to-b to-background absolute inset-0 z-10 from-transparent from-35%"
                 />
-                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border border-orange-200 p-4 shadow-lg shadow-orange-500/15 ring-1">
-                  <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-950 dark:to-orange-900 aspect-15/8 relative rounded-2xl border border-orange-200 overflow-hidden">
-                    <GridMotion items={gridItems} gradientColor="rgba(249, 115, 22, 0.1)" className="h-full w-full" />
+                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border border-purple-300 p-4 shadow-lg shadow-purple-600/15 ring-1">
+                  <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-950 dark:to-purple-900 aspect-15/8 relative rounded-2xl border border-purple-300 overflow-hidden">
+                    <GridMotion items={gridItems} gradientColor="rgba(147, 51, 234, 0.1)" className="h-full w-full" />
                   </div>
                 </div>
               </div>
@@ -259,7 +270,7 @@ export default function SoftwareDevelopmentWebsite() {
               <section className="bg-background pb-16 pt-16 md:pb-32">
                 <div className="group relative m-auto max-w-5xl px-6">
                   <div className="absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 duration-500 group-hover:scale-100 group-hover:opacity-100">
-                    <a href="#contact" className="block text-sm duration-150 hover:opacity-75 text-orange-500">
+                    <a href="#contact" className="block text-sm duration-150 hover:opacity-75 text-purple-600">
                       <span>{t('hero.readyToStart')}</span>
                       <ChevronRight className="ml-1 inline-block size-3" />
                     </a>
@@ -348,17 +359,17 @@ export default function SoftwareDevelopmentWebsite() {
           <div className="@container mx-auto max-w-5xl px-6">
             <div className="text-center">
               <h2 className="text-balance text-4xl font-semibold lg:text-5xl">
-                {t('features.title')} <span className="text-orange-500">{t('features.titleHighlight')}</span>
+                {t('features.title')} <span className="text-purple-600">{t('features.titleHighlight')}</span>
               </h2>
               <p className="mt-4 text-muted-foreground">
                 {t('features.description')}
               </p>
             </div>
-            <Card className="@min-4xl:max-w-full @min-4xl:grid-cols-3 @min-4xl:divide-x @min-4xl:divide-y-0 mx-auto mt-8 grid max-w-sm divide-y overflow-hidden shadow-zinc-950/5 border-orange-200 *:text-center md:mt-16">
+            <Card className="@min-4xl:max-w-full @min-4xl:grid-cols-3 @min-4xl:divide-x @min-4xl:divide-y-0 mx-auto mt-8 grid max-w-sm divide-y overflow-hidden shadow-zinc-950/5 border-purple-300 *:text-center md:mt-16">
               <div className="group shadow-zinc-950/5">
                 <CardHeader className="pb-3">
                   <CardDecorator>
-                    <Zap className="size-6 text-orange-500" aria-hidden />
+                    <Zap className="size-6 text-purple-600" aria-hidden />
                   </CardDecorator>
 
                   <h3 className="mt-6 font-medium">{t('features.fastDevelopment.title')}</h3>
@@ -374,7 +385,7 @@ export default function SoftwareDevelopmentWebsite() {
               <div className="group shadow-zinc-950/5">
                 <CardHeader className="pb-3">
                   <CardDecorator>
-                    <Settings2 className="size-6 text-orange-500" aria-hidden />
+                    <Settings2 className="size-6 text-purple-600" aria-hidden />
                   </CardDecorator>
 
                   <h3 className="mt-6 font-medium">{t('features.scalable.title')}</h3>
@@ -390,7 +401,7 @@ export default function SoftwareDevelopmentWebsite() {
               <div className="group shadow-zinc-950/5">
                 <CardHeader className="pb-3">
                   <CardDecorator>
-                    <Sparkles className="size-6 text-orange-500" aria-hidden />
+                    <Sparkles className="size-6 text-purple-600" aria-hidden />
                   </CardDecorator>
 
                   <h3 className="mt-6 font-medium">{t('features.modern.title')}</h3>

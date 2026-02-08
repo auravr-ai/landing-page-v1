@@ -214,7 +214,7 @@ const CarouselDots = React.forwardRef<
           className={cn(
             "h-2 w-2 rounded-full transition-all",
             index === api?.selectedIndex
-              ? "bg-orange-500 w-8"
+              ? "bg-purple-600 w-8"
               : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
           )}
           onClick={() => api?.scrollTo(index)}
