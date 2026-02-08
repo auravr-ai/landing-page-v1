@@ -48,28 +48,11 @@ export function Footer() {
             <h3 className="text-sm font-semibold text-foreground">{t('footer.services.title')}</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
-                  {t('footer.services.web')}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
-                  {t('footer.services.mobile')}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
-                  {t('footer.services.custom')}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
-                  {t('footer.services.api')}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
-                  {t('footer.services.cloud')}
+                <a
+                  href={t('footer.links.features')}
+                  className="text-muted-foreground hover:text-orange-500 transition-colors"
+                >
+                  {t('footer.services.features')}
                 </a>
               </li>
             </ul>
@@ -80,7 +63,10 @@ export function Footer() {
             <h3 className="text-sm font-semibold text-foreground">{t('footer.company.title')}</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
+                <a
+                  href={t('footer.links.team')}
+                  className="text-muted-foreground hover:text-orange-500 transition-colors"
+                >
                   {t('footer.company.team')}
                 </a>
               </li>
@@ -100,7 +86,12 @@ export function Footer() {
                     d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span className="break-all">{t('footer.contact.email')}</span>
+                <a
+                  href={t('footer.links.email')}
+                  className="break-all text-muted-foreground hover:text-orange-500 transition-colors"
+                >
+                  {t('footer.contact.email')}
+                </a>
               </li>
               <li className="flex items-center space-x-2">
                 <svg className="h-4 w-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -128,11 +119,16 @@ export function Footer() {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span>
-                  {t('footer.contact.address')}
-                  <br />
-                  {t('footer.contact.city')}
-                </span>
+                <a
+                  href={t('footer.links.address')}
+                  className="text-muted-foreground hover:text-orange-500 transition-colors"
+                >
+                  <span>
+                    {t('footer.contact.address')}
+                    <br />
+                    {t('footer.contact.city')}
+                  </span>
+                </a>
               </li>
             </ul>
           </div>

@@ -37,13 +37,15 @@
   },
   "footer": {
     "description": "Enabling immersive and data driven autism treatment.",
+    "links": {
+      "features": "/features",
+      "team": "/team",
+      "email": "mailto:general@auravr.net",
+      "address": "https://maps.google.com/?q=The%20University%20of%20Hong%20Kong%20Pokfulam%20Hong%20Kong"
+    },
     "services": {
       "title": "Services",
-      "web": "Web Development",
-      "mobile": "Mobile Apps",
-      "custom": "Custom Software",
-      "api": "API Development",
-      "cloud": "Cloud Solutions"
+      "features": "Product Features"
     },
     "company": {
       "title": "Company",
@@ -60,5 +62,146 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "cookies": "Cookie Policy"
+  },
+  "featuresPage": {
+    "title": "Product Features",
+    "subtitle": "Discover the innovative features that power our immersive gaming experience",
+    "keyFeatures": {
+      "title": "Key Features",
+      "immersiveGameplay": {
+        "title": "Immersive Gameplay",
+        "description": "Experience unprecedented immersion with cutting-edge VR technology and realistic physics"
+      },
+      "aiPoweredNPCs": {
+        "title": "AI-Powered NPCs",
+        "description": "Interact with intelligent characters that adapt and respond naturally to your actions"
+      },
+      "dynamicEnvironments": {
+        "title": "Dynamic Environments",
+        "description": "Explore living worlds that change and evolve based on your choices and actions"
+      },
+      "multiplayerExperience": {
+        "title": "Multiplayer Experience",
+        "description": "Team up with friends or compete globally in seamless online gameplay"
+      },
+      "crossPlatform": {
+        "title": "Cross-Platform Support",
+        "description": "Play anywhere, anytime across PC, console, and mobile devices"
+      },
+      "regularUpdates": {
+        "title": "Regular Updates",
+        "description": "Enjoy continuous new content, features, and improvements based on community feedback"
+      }
+    },
+    "environments": {
+      "title": "Game Environments",
+      "forestRealm": {
+        "name": "Forest Realm",
+        "description": "Dense forests with ancient trees and mystical creatures"
+      },
+      "urbanCityscape": {
+        "name": "Urban Cityscape",
+        "description": "Bustling metropolis with towering skyscrapers and neon lights"
+      },
+      "desertWasteland": {
+        "name": "Desert Wasteland",
+        "description": "Vast sandy expanse with hidden treasures and dangers"
+      },
+      "underwaterWorld": {
+        "name": "Underwater World",
+        "description": "Explore the depths of mysterious ocean realms"
+      },
+      "mountainPeaks": {
+        "name": "Mountain Peaks",
+        "description": "Scale majestic mountains and discover hidden valleys"
+      },
+      "spaceStation": {
+        "name": "Space Station",
+        "description": "Experience zero gravity in futuristic orbital facilities"
+      }
+    }
+  },
+  "teamPage": {
+    "title": "Our Team",
+    "subtitle": "Meet the talented people behind AURA",
+    "teamMembers": {
+      "title": "Team Members",
+      "member1": {
+        "name": "Jake Liu",
+        "role": "Co-Founder & CEO",
+        "bio": "HKU Mathematics & Entrepreneurship, Experienced in Business Development"
+      },
+      "member2": {
+        "name": "Victor Chui",
+        "role": "Co-Founder & CTO",
+        "bio": "HKU Computer Science, Experienced in Game Development and AI Systems"
+      },
+      "member3": {
+        "name": "Alison Li",
+        "role": "Co-Founder & CPO",
+        "bio": "PolyU Occupational Therapy, Experienced in Autism Treatment"
+      },
+      "member4": {
+        "name": "Kitty Sham",
+        "role": "Research Manager",
+        "bio": "HKU Medicine, Experienced in Paediatrics"
+      },
+      "member5": {
+        "name": "Amy Lee",
+        "role": "Research Officer",
+        "bio": "HKU Speech and Hearing Sciences, Experienced in Autism Assessment"
+      },
+      "member6": {
+        "name": "Fung Pun",
+        "role": "Software Developer",
+        "bio": "HKU Computer Science, Experienced in Full Stack Development"
+      }
+    },
+    "advisors": {
+      "title": "Advisors",
+      "advisor1": {
+        "name": "Prof. Yvonne Han",
+        "role": "Research Advisor",
+        "bio": "Program Leader at PolyU Occupational Therapy "
+      },
+      "advisor2": {
+        "name": "Prof. Kathy Shum",
+        "role": "Research Advisor",
+        "bio": "Associate Professor at HKU Psychology"
+      },
+      "advisor3": {
+        "name": "Prof. Will Chien",
+        "role": "Research Advisor",
+        "bio": "Associate Professor at PolyU Occupational Therapy"
+      },
+      "advisor4": {
+        "name": "Mr. Johnny Lam",
+        "role": "Clinical Advisor",
+        "bio": "Seasoned Paediatrics OT"
+      },
+      "advisor5": {
+        "name": "Mr. Eddie Lui",
+        "role": "Clinical Advisor",
+        "bio": "Paediatrics OT of Practice"
+      }
+    },
+    "achievements": {
+      "title": "Achievements & Recognition",
+      "award1": {
+        "title": "Alibaba JUMPSTARTER ZPIRE",
+        "description": "Top 30 (in progress to Top 5)",
+        "year": "2025"
+      },
+      "award2": {
+        "title": "HK Techathon+",
+        "description": "Merit in Life Science & Healthcare",
+        "year": "2026"
+      },
+      "award3": {
+        "title": "HKSTP Ideation",
+        "description": "Participant",
+        "year": "2026"
+      }
+    }
   }
 }
