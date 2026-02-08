@@ -21,18 +21,18 @@
   "features": {
     "title": "Why Choose",
     "titleHighlight": "AURA",
-    "description": "We deliver high-quality software solutions that help your business grow and succeed in the digital world.",
+    "description": "Innovative VR treatment designed for children with autism",
     "fastDevelopment": {
-      "title": "Fast Development",
-      "description": "Rapid prototyping and agile development process to get your software to market quickly."
+      "title": "Personalized Learning",
+      "description": "AI-powered adaptive scenarios that adjust to each child's unique needs, learning pace, and therapeutic goals."
     },
     "scalable": {
-      "title": "Scalable Solutions",
-      "description": "Built to grow with your business, our solutions scale seamlessly as your needs evolve."
+      "title": "Gamified Experience",
+      "description": "Interactive VR games that make therapy engaging and enjoyable, encouraging active participation and better learning outcomes."
     },
     "modern": {
-      "title": "Modern Technology",
-      "description": "Using the latest technologies and best practices to ensure your software is future-proof."
+      "title": "Safe & Supervised",
+      "description": "Controlled virtual environments with therapist oversight and progress tracking for complete safety."
     }
   },
   "footer": {
@@ -79,18 +79,6 @@
       "dynamicEnvironments": {
         "title": "Dynamic Environments",
         "description": "Explore living worlds that change and evolve based on your choices and actions"
-      },
-      "multiplayerExperience": {
-        "title": "Multiplayer Experience",
-        "description": "Team up with friends or compete globally in seamless online gameplay"
-      },
-      "crossPlatform": {
-        "title": "Cross-Platform Support",
-        "description": "Play anywhere, anytime across PC, console, and mobile devices"
-      },
-      "regularUpdates": {
-        "title": "Regular Updates",
-        "description": "Enjoy continuous new content, features, and improvements based on community feedback"
       }
     },
     "environments": {

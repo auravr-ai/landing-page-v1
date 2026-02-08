@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import Link from "next/link"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 import { ArrowRight, ChevronRight, Zap, Settings2, Sparkles } from "lucide-react"
@@ -220,12 +221,22 @@ export default function SoftwareDevelopmentWebsite() {
                   className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row"
                 >
                   <div key={1} className="bg-purple-600/10 rounded-[14px] border border-purple-300 p-0.5">
-                    <Button size="lg" className="rounded-xl px-5 text-base bg-purple-600 hover:bg-purple-700">
-                      <span className="text-nowrap">{t('hero.consultation')}</span>
+                    <Button asChild size="lg" className="rounded-xl px-5 text-base bg-purple-600 hover:bg-purple-700">
+                      <Link href="/features">
+                        <span className="text-nowrap">{t('hero.consultation')}</span>
+                      </Link>
                     </Button>
                   </div>
-                  <Button key={2} size="lg" variant="ghost" className="h-10.5 rounded-xl px-5 hover:text-purple-600">
-                    <span className="text-nowrap">{t('hero.viewWork')}</span>
+                  <Button
+                    key={2}
+                    asChild
+                    size="lg"
+                    variant="ghost"
+                    className="h-10.5 rounded-xl px-5 hover:text-purple-600"
+                  >
+                    <Link href="/team">
+                      <span className="text-nowrap">{t('hero.viewWork')}</span>
+                    </Link>
                   </Button>
                 </AnimatedGroup>
               </div>

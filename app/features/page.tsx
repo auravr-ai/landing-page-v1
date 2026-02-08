@@ -1,13 +1,14 @@
 "use client"
 
 import * as React from "react"
-import { 
-  Gamepad2, 
-  Bot, 
-  Globe, 
-  Users, 
-  Monitor, 
-  Sparkles 
+import {
+  Gamepad2,
+  Bot,
+  Globe,
+  Users,
+  Monitor,
+  Sparkles,
+  type LucideIcon
 } from "lucide-react"
 import { motion } from "framer-motion"
 import { useTranslation } from "react-i18next"
@@ -45,40 +46,45 @@ const containerVariants = {
 }
 
 export default function FeaturesPage() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
-  const features = [
-    {
-      icon: Gamepad2,
-      title: t('featuresPage.keyFeatures.immersiveGameplay.title'),
-      description: t('featuresPage.keyFeatures.immersiveGameplay.description'),
-    },
-    {
-      icon: Bot,
-      title: t('featuresPage.keyFeatures.aiPoweredNPCs.title'),
-      description: t('featuresPage.keyFeatures.aiPoweredNPCs.description'),
-    },
-    {
-      icon: Globe,
-      title: t('featuresPage.keyFeatures.dynamicEnvironments.title'),
-      description: t('featuresPage.keyFeatures.dynamicEnvironments.description'),
-    },
-    {
-      icon: Users,
-      title: t('featuresPage.keyFeatures.multiplayerExperience.title'),
-      description: t('featuresPage.keyFeatures.multiplayerExperience.description'),
-    },
-    {
-      icon: Monitor,
-      title: t('featuresPage.keyFeatures.crossPlatform.title'),
-      description: t('featuresPage.keyFeatures.crossPlatform.description'),
-    },
-    {
-      icon: Sparkles,
-      title: t('featuresPage.keyFeatures.regularUpdates.title'),
-      description: t('featuresPage.keyFeatures.regularUpdates.description'),
-    },
+  const iconByKey: Record<string, LucideIcon> = {
+    immersiveGameplay: Gamepad2,
+    aiPoweredNPCs: Bot,
+    dynamicEnvironments: Globe,
+    multiplayerExperience: Users,
+    crossPlatform: Monitor,
+    regularUpdates: Sparkles,
+  }
+
+  const fallbackIcons: LucideIcon[] = [
+    Gamepad2,
+    Bot,
+    Globe,
+    Users,
+    Monitor,
+    Sparkles,
   ]
+
+  const features = React.useMemo(() => {
+    const bundle = i18n.getResourceBundle(i18n.language, "translation") as
+      | { featuresPage?: { keyFeatures?: Record<string, unknown> } }
+      | undefined
+
+    const keyFeatures = bundle?.featuresPage?.keyFeatures ?? {}
+
+    return Object.entries(keyFeatures)
+      .filter(([key, value]) => key !== "title" && typeof value === "object")
+      .map(([key], index) => {
+        const icon = iconByKey[key] ?? fallbackIcons[index % fallbackIcons.length]
+
+        return {
+          icon,
+          title: t(`featuresPage.keyFeatures.${key}.title`),
+          description: t(`featuresPage.keyFeatures.${key}.description`),
+        }
+      })
+  }, [i18n, t])
 
   const environments = [
     {
