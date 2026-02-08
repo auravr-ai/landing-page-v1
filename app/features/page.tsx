@@ -160,13 +160,13 @@ export default function FeaturesPage() {
               <motion.div key={index} variants={fadeInVariants}>
                 <Card 
                   className={cn(
-                    "group h-full border-orange-200 hover:border-orange-500 transition-all duration-300",
-                    "hover:shadow-lg hover:shadow-orange-500/20"
+                    "group h-full border-purple-300 hover:border-purple-600 transition-all duration-300",
+                    "hover:shadow-lg hover:shadow-purple-600/20"
                   )}
                 >
                   <CardHeader>
-                    <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-orange-100 dark:bg-orange-900/30 mb-4">
-                      <feature.icon className="w-6 h-6 text-orange-500" />
+                    <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-900/30 mb-4">
+                      <feature.icon className="w-6 h-6 text-purple-600" />
                     </div>
                     <h3 className="text-xl font-semibold">{feature.title}</h3>
                   </CardHeader>
@@ -208,7 +208,7 @@ export default function FeaturesPage() {
               <CarouselContent>
                 {environments.map((env, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <Card className="border-orange-200 overflow-hidden group">
+                    <Card className="border-purple-300 overflow-hidden group">
                       <div className={cn(
                         "relative h-48 bg-gradient-to-br",
                         env.gradient,
@@ -226,8 +226,8 @@ export default function FeaturesPage() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="border-orange-200 hover:bg-orange-50 hover:border-orange-500" />
-              <CarouselNext className="border-orange-200 hover:bg-orange-50 hover:border-orange-500" />
+              <CarouselPrevious className="border-purple-300 hover:bg-purple-50 hover:border-purple-600" />
+              <CarouselNext className="border-purple-300 hover:bg-purple-50 hover:border-purple-600" />
               <CarouselDots count={environments.length} />
             </Carousel>
           </motion.div>

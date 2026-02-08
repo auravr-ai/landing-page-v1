@@ -6,7 +6,7 @@ import { Logo } from "@/components/ui/logo"
 export function Footer() {
   const { t } = useTranslation()
   return (
-    <footer className="bg-background border-t border-orange-200">
+    <footer className="bg-background border-t border-purple-300">
       <div className="mx-auto max-w-7xl py-16 px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
@@ -16,7 +16,7 @@ export function Footer() {
               {t('footer.description')}
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-purple-600 transition-colors">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     fillRule="evenodd"
@@ -25,12 +25,12 @@ export function Footer() {
                   />
                 </svg>
               </a>
-              <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-purple-600 transition-colors">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </a>
-              <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-purple-600 transition-colors">
                 <svg className="h-5 w-5 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
@@ -50,7 +50,7 @@ export function Footer() {
               <li>
                 <a
                   href={t('footer.links.features')}
-                  className="text-muted-foreground hover:text-orange-500 transition-colors"
+                  className="text-muted-foreground hover:text-purple-600 transition-colors"
                 >
                   {t('footer.services.features')}
                 </a>
@@ -65,7 +65,7 @@ export function Footer() {
               <li>
                 <a
                   href={t('footer.links.team')}
-                  className="text-muted-foreground hover:text-orange-500 transition-colors"
+                  className="text-muted-foreground hover:text-purple-600 transition-colors"
                 >
                   {t('footer.company.team')}
                 </a>
@@ -88,7 +88,7 @@ export function Footer() {
                 </svg>
                 <a
                   href={t('footer.links.email')}
-                  className="break-all text-muted-foreground hover:text-orange-500 transition-colors"
+                  className="break-all text-muted-foreground hover:text-purple-600 transition-colors"
                 >
                   {t('footer.contact.email')}
                 </a>
@@ -121,7 +121,7 @@ export function Footer() {
                 </svg>
                 <a
                   href={t('footer.links.address')}
-                  className="text-muted-foreground hover:text-orange-500 transition-colors"
+                  className="text-muted-foreground hover:text-purple-600 transition-colors"
                 >
                   <span>
                     {t('footer.contact.address')}
@@ -135,17 +135,17 @@ export function Footer() {
         </div>
 
         {/* Bottom section */}
-        <div className="mt-12 pt-8 border-t border-orange-200">
+        <div className="mt-12 pt-8 border-t border-purple-300">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
             <div className="text-sm text-muted-foreground">{t('footer.copyright')}</div>
             <div className="flex flex-wrap justify-center sm:justify-end gap-x-6 gap-y-2 text-sm">
-              <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-purple-600 transition-colors">
                 {t('footer.privacy')}
               </a>
-              <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-purple-600 transition-colors">
                 {t('footer.terms')}
               </a>
-              <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-purple-600 transition-colors">
                 {t('footer.cookies')}
               </a>
             </div>

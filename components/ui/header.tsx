@@ -196,7 +196,7 @@ export function Header() {
                 </Button>
                 <Button
                   size="sm"
-                  className="bg-orange-500 hover:bg-orange-600"
+                  className="bg-purple-600 hover:bg-purple-700"
                 >
                   <span>{t('header.getStarted')}</span>
                 </Button> 
