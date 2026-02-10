@@ -11,9 +11,9 @@
   },
   "hero": {
     "titleStart": "Enabling",
-    "titleHighlight": "Immersive & Data Driven",
+    "titleHighlight": "Immersive & Data-driven",
     "titleEnd": "Autism Treatment",
-    "description": "We build scalable, efficient software solutions tailored to your business needs. From web applications to mobile apps, we help small businesses grow with technology.",
+    "description": "We transform traditional Autism Treatment into an engaging and effective experience through immersive VR games, personalized learning programs, and AI-powered adaptive scenarios.",
     "consultation": "Product Features",
     "viewWork": "Our Team",
     "readyToStart": "Ready to Start Your Project?"
@@ -68,31 +68,31 @@
     "subtitle": "Discover the innovative features that power our immersive gaming experience",
     "keyFeatures": {
       "title": "Key Features",
-      "immersiveGameplay": {
-        "title": "Immersive Gameplay",
-        "description": "Experience unprecedented immersion with cutting-edge VR technology and realistic physics"
+      "personalizedLearningPrograms": {
+        "title": "Personalized Learning Programs",
+        "description": "Each VR experience is customized to the child's specific needs, learning style, and therapeutic goals. Our adaptive AI algorithms continuously adjust difficulty and engagement levels based on real-time performance."
       },
       "aiPoweredNPCs": {
-        "title": "AI-Powered NPCs",
-        "description": "Interact with intelligent characters that adapt and respond naturally to your actions"
+        "title": "Gamified & Interactive",
+        "description": "Our immersive VR games make therapy sessions more engaging and enjoyable, leading to better outcomes and increased participation. Children learn through play in safe, controlled environments."
       },
       "dynamicEnvironments": {
-        "title": "Dynamic Environments",
-        "description": "Explore living worlds that change and evolve based on your choices and actions"
+        "title": "Safe & Supervised Environment",
+        "description": "All experiences are designed in safe, controlled virtual environments with professional oversight, comprehensive progress tracking, and parental monitoring capabilities."
       }
     },
     "environments": {
       "title": "Game Environments",
       "forestRealm": {
-        "name": "Forest Realm",
+        "name": "School: Classroom",
         "description": "Dense forests with ancient trees and mystical creatures"
       },
       "urbanCityscape": {
-        "name": "Urban Cityscape",
+        "name": "Home: Living Room",
         "description": "Bustling metropolis with towering skyscrapers and neon lights"
       },
       "desertWasteland": {
-        "name": "Desert Wasteland",
+        "name": "Park: Playground",
         "description": "Vast sandy expanse with hidden treasures and dangers"
       },
       "underwaterWorld": {
