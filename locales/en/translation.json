@@ -65,20 +65,50 @@
   },
   "featuresPage": {
     "title": "Product Features",
-    "subtitle": "Discover the innovative features that power our immersive gaming experience",
+    "subtitle": "Discover the immersive therapy tools that combine playful VR, adaptive AI, and real-world readiness",
     "keyFeatures": {
-      "title": "Key Features",
-      "personalizedLearningPrograms": {
+      "title": "Adaptive Learning in Action",
+      "personalizedPrograms": {
         "title": "Personalized Learning Programs",
-        "description": "Each VR experience is customized to the child's specific needs, learning style, and therapeutic goals. Our adaptive AI algorithms continuously adjust difficulty and engagement levels based on real-time performance."
+        "description": "Each VR experience is customized to the child's specific needs, learning style, and therapeutic goals. Our adaptive AI algorithms continuously adjust difficulty and engagement levels based on real-time performance.",
+        "bullet1": "AI-powered adaptive scenarios",
+        "bullet2": "Individual progress tracking",
+        "bullet3": "Customizable therapeutic goals",
+        "bullet4": "Real-time difficulty adjustment"
       },
-      "aiPoweredNPCs": {
-        "title": "Gamified & Interactive",
-        "description": "Our immersive VR games make therapy sessions more engaging and enjoyable, leading to better outcomes and increased participation. Children learn through play in safe, controlled environments."
+      "therapistToolkit": {
+        "title": "Therapist Dashboard & Insights",
+        "description": "Clinicians can set goals, tweak sensory load, and review session data with actionable insights that turn every game session into measurable growth.",
+        "bullet1": "Live session controls and safety overrides",
+        "bullet2": "Session recordings with milestone tagging",
+        "bullet3": "Evidence-based templates to speed planning",
+        "bullet4": "Exportable reports for parents and schools"
       },
-      "dynamicEnvironments": {
-        "title": "Safe & Supervised Environment",
-        "description": "All experiences are designed in safe, controlled virtual environments with professional oversight, comprehensive progress tracking, and parental monitoring capabilities."
+      "familyEngagement": {
+        "title": "Family-Friendly, Ready Anywhere",
+        "description": "Lightweight experiences designed for clinic, classroom, or home use keep parents and caregivers involved while maintaining therapist oversight.",
+        "bullet1": "Guided at-home practice with prompts",
+        "bullet2": "Low-friction setup and device flexibility",
+        "bullet3": "Positive reinforcement loops and rewards",
+        "bullet4": "Privacy-first data handling"
+      }
+    },
+    "customizableScenes": {
+      "title": "Customizable VR Scenes",
+      "subtitle": "Tailor scenarios to each child's needs.",
+      "scenes": {
+        "school": {
+          "title": "School Argument De-escalation",
+          "description": "Recreate classroom or hallway disagreements so children can practice calm communication, turn-taking, and perspective-taking before real-world conflicts happen."
+        },
+        "home": {
+          "title": "Home Routine & Transitions",
+          "description": "Practice morning and bedtime routines, requesting help, and managing sensory overload at home with repeatable, guided prompts."
+        },
+        "park": {
+          "title": "Park & Community Outings",
+          "description": "Role-play playground sharing, waiting turns, and safely navigating community spaces with therapist-controlled pacing."
+        }
       }
     },
     "environments": {

@@ -243,7 +243,7 @@ export default function SoftwareDevelopmentWebsite() {
                       ref={videoRef}
                       className="h-full w-full object-cover"
                       preload="metadata"
-                      poster="/media/hero-poster.jpg"
+                      poster="/media/hero-poster.png"
                       src="/media/hero-demo.mp4"
                       playsInline
                       onPlay={handlePlay}

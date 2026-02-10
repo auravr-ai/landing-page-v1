@@ -11,32 +11,32 @@
   },
   "hero": {
     "titleStart": "推動",
-    "titleHighlight": "沉浸及數據驅動的",
+    "titleHighlight": "沉浸且數據驅動的",
     "titleEnd": "自閉症治療",
-    "description": "我們為你的業務度身訂造可延展、高效的軟件方案。由網頁到手機應用，助中小企以科技成長。",
+    "description": "我們透過沉浸式 VR 遊戲、個人化學習方案與 AI 驅動的自適應情境，將傳統自閉症治療轉化為既有趣又有效的體驗。",
     "consultation": "產品特色",
     "viewWork": "我們的團隊",
-    "readyToStart": "準備好開始你的項目了嗎？"
+    "readyToStart": "準備好開始你的專案了嗎？"
   },
   "features": {
     "title": "為何選擇",
     "titleHighlight": "AURA",
-    "description": "我們提供高質素的軟件方案，助你的業務在數碼世界成長並取得成功。",
+    "description": "為自閉症兒童設計的創新 VR 治療",
     "fastDevelopment": {
-      "title": "快速開發",
-      "description": "快速原型加敏捷流程，令你的軟件可以更快面世。"
+      "title": "個人化學習",
+      "description": "AI 驅動的自適應情境，依每位孩子的獨特需求、學習步伐與治療目標而調整。"
     },
     "scalable": {
-      "title": "可延展方案",
-      "description": "隨著業務成長而建構，方案可按需要無縫擴充。"
+      "title": "遊戲化體驗",
+      "description": "互動式 VR 遊戲讓治療更有趣，鼓勵主動參與並提升學習成效。"
     },
     "modern": {
-      "title": "現代科技",
-      "description": "採用最新技術與最佳實踐，確保你的軟件面向未來。"
+      "title": "安全與監督",
+      "description": "受治療師監督的可控虛擬環境，並具備進度追蹤以確保完整安全。"
     }
   },
   "footer": {
-    "description": "推動沉浸及數據驅動的自閉症治療。",
+    "description": "推動沉浸與數據驅動的自閉症治療。",
     "links": {
       "features": "/features",
       "team": "/team",
@@ -56,68 +56,86 @@
       "email": "general@auravr.net",
       "phone": "+852 9841 0407",
       "address": "香港大學",
-      "city": "薄扶林，香港"
+      "city": "香港薄扶林"
     },
     "copyright": "© 2026 AURA. 版權所有。",
     "privacy": "私隱政策",
-    "terms": "使用條款",
+    "terms": "服務條款",
     "cookies": "Cookie 政策"
   },
   "featuresPage": {
     "title": "產品特色",
-    "subtitle": "探索驅動我們沉浸式遊戲體驗的創新功能",
+    "subtitle": "探索結合趣味 VR、適應性 AI 與真實情境準備的沉浸式治療工具",
     "keyFeatures": {
-      "title": "主要功能",
-      "immersiveGameplay": {
-        "title": "沉浸式遊戲體驗",
-        "description": "透過尖端 VR 技術與逼真物理效果，體驗前所未有的沉浸感"
+      "title": "適應式學習進行中",
+      "personalizedPrograms": {
+        "title": "個人化學習方案",
+        "description": "每個 VR 體驗都會依孩子的特定需求、學習風格與治療目標量身定制。我們的適應式 AI 演算法會根據即時表現持續調整難度與參與度。",
+        "bullet1": "AI 驅動的自適應情境",
+        "bullet2": "個別進度追蹤",
+        "bullet3": "可自訂的治療目標",
+        "bullet4": "即時難度調節"
       },
-      "aiPoweredNPCs": {
-        "title": "AI 驅動的 NPC",
-        "description": "與能適應並自然回應你行動的智慧角色互動"
+      "therapistToolkit": {
+        "title": "治療師控制台與洞察",
+        "description": "臨床人員可設定目標、調整感官負荷，並檢視具行動意義的課程數據，將每場遊戲化為可衡量的成長。",
+        "bullet1": "即時課程控制與安全覆蓋",
+        "bullet2": "課程錄影與里程碑標註",
+        "bullet3": "循證模板加速規劃",
+        "bullet4": "可匯出的報告供家長與學校使用"
       },
-      "dynamicEnvironments": {
-        "title": "動態環境",
-        "description": "探索會因你的選擇和行動而改變、進化的生動世界"
-      },
-      "multiplayerExperience": {
-        "title": "多人遊戲體驗",
-        "description": "與朋友組隊，或在無縫線上遊戲中與全球玩家競爭"
-      },
-      "crossPlatform": {
-        "title": "跨平台支援",
-        "description": "隨時隨地在 PC、主機及手機裝置上遊玩"
-      },
-      "regularUpdates": {
-        "title": "定期更新",
-        "description": "按社群回饋持續推出新內容、功能與改進"
+      "familyEngagement": {
+        "title": "親子友善，隨處可用",
+        "description": "輕量體驗可於診所、課室或家中使用，讓家長與照顧者參與，同時保持治療師監督。",
+        "bullet1": "具提示的居家練習",
+        "bullet2": "低摩擦設定與裝置彈性",
+        "bullet3": "正向增強迴路與獎勵",
+        "bullet4": "隱私優先的資料處理"
+      }
+    },
+    "customizableScenes": {
+      "title": "可自訂的 VR 情境",
+      "subtitle": "為每位孩子量身打造情境。",
+      "scenes": {
+        "school": {
+          "title": "校園爭執降溫",
+          "description": "重現課室或走廊的爭執，讓孩子在現實衝突發生前練習冷靜溝通、輪流與同理心。"
+        },
+        "home": {
+          "title": "家中日常與轉換",
+          "description": "透過可重複、具指導的提示，練習早晚例行、公詢協助，以及在家中管理感官過載。"
+        },
+        "park": {
+          "title": "公園與社區外出",
+          "description": "角色扮演遊樂場分享、輪流等待，並在治療師控制節奏下安全地探索社區空間。"
+        }
       }
     },
     "environments": {
       "title": "遊戲環境",
       "forestRealm": {
-        "name": "Forest Realm",
-        "description": "滿佈古老樹木與神秘生物的茂密森林"
+        "name": "學校：課室",
+        "description": "茂密森林般的課室情境，隱藏著神秘驚喜"
       },
       "urbanCityscape": {
-        "name": "Urban Cityscape",
-        "description": "高樓林立、霓虹閃爍的繁華都會"
+        "name": "家：客廳",
+        "description": "繁忙都會般的家居場景，充滿互動刺激"
       },
       "desertWasteland": {
-        "name": "Desert Wasteland",
-        "description": "廣袤沙漠，隱藏著寶藏與危機"
+        "name": "公園：遊樂場",
+        "description": "廣闊沙地式的遊樂場，等待探索與挑戰"
       },
       "underwaterWorld": {
-        "name": "Underwater World",
-        "description": "探索神秘海洋領域的深處"
+        "name": "海底世界",
+        "description": "探索神秘海洋深處的奇幻領域"
       },
       "mountainPeaks": {
-        "name": "Mountain Peaks",
-        "description": "攀登雄偉山脈，發現隱蔽山谷"
+        "name": "山巒峰頂",
+        "description": "攀登雄偉山脈並發現隱藏的山谷"
       },
       "spaceStation": {
-        "name": "Space Station",
-        "description": "在未來感的軌道設施中體驗失重"
+        "name": "太空站",
+        "description": "在未來感軌道設施中體驗失重"
       }
     }
   },
@@ -129,7 +147,7 @@
       "member1": {
         "name": "Jake Liu",
         "role": "共同創辦人兼執行長",
-        "bio": "香港大學數學及創業背景，擅長業務拓展"
+        "bio": "香港大學數學與創業背景，具商務拓展經驗"
       },
       "member2": {
         "name": "Victor Chui",
@@ -139,7 +157,7 @@
       "member3": {
         "name": "Alison Li",
         "role": "共同創辦人兼產品長",
-        "bio": "理大職業治療背景，專注自閉症治療"
+        "bio": "理大職業治療背景，具自閉症治療經驗"
       },
       "member4": {
         "name": "Kitty Sham",
@@ -149,12 +167,12 @@
       "member5": {
         "name": "Amy Lee",
         "role": "研究主任",
-        "bio": "香港大學言語及聽覺科學背景，擅長自閉症評估"
+        "bio": "香港大學言語及聽覺科學，具自閉症評估經驗"
       },
       "member6": {
         "name": "Fung Pun",
         "role": "軟件開發人員",
-        "bio": "香港大學計算機科學，擅長全端開發"
+        "bio": "香港大學計算機科學，具全端開發經驗"
       }
     },
     "advisors": {

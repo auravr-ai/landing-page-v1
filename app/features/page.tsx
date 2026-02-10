@@ -8,9 +8,11 @@ import {
   Users,
   Monitor,
   Sparkles,
+  CheckCircle2,
   type LucideIcon
 } from "lucide-react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { useTranslation } from "react-i18next"
 import { Card, CardHeader, CardContent } from "@/components/ui/card"
 import { 
@@ -119,6 +121,37 @@ export default function FeaturesPage() {
     },
   ]
 
+  const adaptiveCards = [
+    {
+      key: "personalizedPrograms",
+      accent: "bg-purple-600",
+      image: "/media/personalized.png"
+    },
+    {
+      key: "therapistToolkit",
+      accent: "bg-emerald-600",
+      image: "/media/therapist.jpeg"
+    },
+  ] as const
+
+  const sceneCards = [
+    {
+      key: "school",
+      gradient: "from-amber-400/70 via-orange-300/60 to-yellow-200/70",
+      image: "/scenes/school.png"
+    },
+    {
+      key: "home",
+      gradient: "from-purple-500/70 via-pink-400/60 to-rose-300/70",
+      image: "/scenes/home.png"
+    },
+    {
+      key: "park",
+      gradient: "from-green-500/70 via-emerald-400/60 to-lime-300/70",
+      image: "/scenes/park.png"
+    }
+  ]
+
   return (
     <main className="overflow-hidden">
       {/* Hero Section */}
@@ -140,19 +173,106 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      {/* Key Features Section */}
+      {/* Adaptive Learning Section */}
       <section className="py-16 md:py-24 bg-muted/50">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-7xl px-6 space-y-12">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeInVariants}
-            className="text-center mb-12"
+            className="text-center"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
               {t('featuresPage.keyFeatures.title')}
             </h2>
+            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+              {t('featuresPage.subtitle')}
+            </p>
+          </motion.div>
+
+          <div className="space-y-10">
+            {adaptiveCards.map((card, index) => (
+              <motion.div
+                key={card.key}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-80px" }}
+                variants={containerVariants}
+                className="grid gap-8 lg:grid-cols-2 items-center"
+              >
+                <motion.div
+                  variants={fadeInVariants}
+                  className={cn(
+                    "order-2 lg:order-1",
+                    index % 2 === 1 && "lg:order-2"
+                  )}
+                >
+                  <Card className="border border-purple-200/70 shadow-sm">
+                    <CardHeader className="pb-4">
+                      <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center text-white", card.accent)}>
+                        <Sparkles className="w-6 h-6" />
+                      </div>
+                      <h3 className="text-2xl font-semibold">
+                        {t(`featuresPage.keyFeatures.${card.key}.title`)}
+                      </h3>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                      <p className="text-muted-foreground">
+                        {t(`featuresPage.keyFeatures.${card.key}.description`)}
+                      </p>
+                      <ul className="grid gap-3 sm:grid-cols-2">
+                        {[1,2,3,4].map((num) => (
+                          <li key={num} className="flex items-start gap-2 text-sm">
+                            <CheckCircle2 className="mt-0.5 h-5 w-5 text-emerald-500" />
+                            <span>{t(`featuresPage.keyFeatures.${card.key}.bullet${num}`)}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+
+                <motion.div
+                  variants={fadeInVariants}
+                  className={cn(
+                    "order-1 lg:order-2",
+                    index % 2 === 1 && "lg:order-1"
+                  )}
+                >
+                  <div className="relative overflow-hidden rounded-2xl aspect-video shadow-md">
+                    <Image
+                      src={card.image}
+                      alt={t(`featuresPage.keyFeatures.${card.key}.title`)}
+                      fill
+                      className="object-cover"
+                      sizes="(min-width: 1024px) 50vw, 100vw"
+                      priority={index === 0}
+                    />
+                  </div>
+                </motion.div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Customizable Scenes Section */}
+      <section className="py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-6 space-y-10">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-120px" }}
+            variants={fadeInVariants}
+            className="text-center space-y-4"
+          >
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+              {t('featuresPage.customizableScenes.title')}
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
+              {t('featuresPage.customizableScenes.subtitle')}
+            </p>
           </motion.div>
 
           <motion.div
@@ -160,24 +280,28 @@ export default function FeaturesPage() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
           >
-            {features.map((feature, index) => (
-              <motion.div key={index} variants={fadeInVariants}>
-                <Card 
-                  className={cn(
-                    "group h-full border-purple-300 hover:border-purple-600 transition-all duration-300",
-                    "hover:shadow-lg hover:shadow-purple-600/20"
-                  )}
-                >
-                  <CardHeader>
-                    <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-900/30 mb-4">
-                      <feature.icon className="w-6 h-6 text-purple-600" />
-                    </div>
-                    <h3 className="text-xl font-semibold">{feature.title}</h3>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{feature.description}</p>
+            {sceneCards.map((scene) => (
+              <motion.div key={scene.key} variants={fadeInVariants}>
+                <Card className="h-full overflow-hidden border-purple-200/70">
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={scene.image}
+                      alt={t(`featuresPage.customizableScenes.scenes.${scene.key}.title`)}
+                      fill
+                      className="object-cover"
+                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      priority={scene.key === "school"}
+                    />
+                  </div>
+                  <CardContent className="space-y-2 pt-4">
+                    <h3 className="text-xl font-semibold">
+                      {t(`featuresPage.customizableScenes.scenes.${scene.key}.title`)}
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      {t(`featuresPage.customizableScenes.scenes.${scene.key}.description`)}
+                    </p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -186,59 +310,6 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      {/* Game Environments Carousel Section */}
-      <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInVariants}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-              {t('featuresPage.environments.title')}
-            </h2>
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInVariants}
-          >
-            <Carousel 
-              className="w-full max-w-5xl mx-auto"
-              opts={{ loop: true }}
-            >
-              <CarouselContent>
-                {environments.map((env, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <Card className="border-purple-300 overflow-hidden group">
-                      <div className={cn(
-                        "relative h-48 bg-gradient-to-br",
-                        env.gradient,
-                        "transition-transform duration-300 group-hover:scale-105"
-                      )}>
-                        <div className="absolute inset-0 bg-black/20" />
-                        <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-                          <h3 className="text-white font-semibold text-lg">{env.name}</h3>
-                        </div>
-                      </div>
-                      <CardContent className="pt-4">
-                        <p className="text-sm text-muted-foreground">{env.description}</p>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="border-purple-300 hover:bg-purple-50 hover:border-purple-600" />
-              <CarouselNext className="border-purple-300 hover:bg-purple-50 hover:border-purple-600" />
-              <CarouselDots count={environments.length} />
-            </Carousel>
-          </motion.div>
-        </div>
-      </section>
     </main>
   )
 }
