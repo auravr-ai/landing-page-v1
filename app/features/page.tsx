@@ -1,43 +1,26 @@
 "use client"
 
 import * as React from "react"
-import {
-  Gamepad2,
-  Bot,
-  Globe,
-  Users,
-  Monitor,
-  Sparkles,
-  CheckCircle2,
-  type LucideIcon
-} from "lucide-react"
-import { motion } from "framer-motion"
+import { Sparkles, CheckCircle2 } from "lucide-react"
+import { motion, type Variants } from "framer-motion"
 import Image from "next/image"
 import { useTranslation } from "react-i18next"
 import { Card, CardHeader, CardContent } from "@/components/ui/card"
-import { 
-  Carousel, 
-  CarouselContent, 
-  CarouselItem, 
-  CarouselNext, 
-  CarouselPrevious,
-  CarouselDots
-} from "@/components/ui/carousel"
 import { cn } from "@/lib/utils"
 
-const fadeInVariants = {
+const fadeInVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { 
     opacity: 1, 
     y: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut"
+      ease: "easeOut",
     }
   }
 }
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -48,78 +31,7 @@ const containerVariants = {
 }
 
 export default function FeaturesPage() {
-  const { t, i18n } = useTranslation()
-
-  const iconByKey: Record<string, LucideIcon> = {
-    immersiveGameplay: Gamepad2,
-    aiPoweredNPCs: Bot,
-    dynamicEnvironments: Globe,
-    multiplayerExperience: Users,
-    crossPlatform: Monitor,
-    regularUpdates: Sparkles,
-  }
-
-  const fallbackIcons: LucideIcon[] = [
-    Gamepad2,
-    Bot,
-    Globe,
-    Users,
-    Monitor,
-    Sparkles,
-  ]
-
-  const features = React.useMemo(() => {
-    const bundle = i18n.getResourceBundle(i18n.language, "translation") as
-      | { featuresPage?: { keyFeatures?: Record<string, unknown> } }
-      | undefined
-
-    const keyFeatures = bundle?.featuresPage?.keyFeatures ?? {}
-
-    return Object.entries(keyFeatures)
-      .filter(([key, value]) => key !== "title" && typeof value === "object")
-      .map(([key], index) => {
-        const icon = iconByKey[key] ?? fallbackIcons[index % fallbackIcons.length]
-
-        return {
-          icon,
-          title: t(`featuresPage.keyFeatures.${key}.title`),
-          description: t(`featuresPage.keyFeatures.${key}.description`),
-        }
-      })
-  }, [i18n, t])
-
-  const environments = [
-    {
-      name: t('featuresPage.environments.forestRealm.name'),
-      description: t('featuresPage.environments.forestRealm.description'),
-      gradient: 'from-green-600 to-emerald-800'
-    },
-    {
-      name: t('featuresPage.environments.urbanCityscape.name'),
-      description: t('featuresPage.environments.urbanCityscape.description'),
-      gradient: 'from-blue-600 to-purple-800'
-    },
-    {
-      name: t('featuresPage.environments.desertWasteland.name'),
-      description: t('featuresPage.environments.desertWasteland.description'),
-      gradient: 'from-orange-400 to-red-700'
-    },
-    {
-      name: t('featuresPage.environments.underwaterWorld.name'),
-      description: t('featuresPage.environments.underwaterWorld.description'),
-      gradient: 'from-cyan-600 to-blue-900'
-    },
-    {
-      name: t('featuresPage.environments.mountainPeaks.name'),
-      description: t('featuresPage.environments.mountainPeaks.description'),
-      gradient: 'from-slate-500 to-zinc-800'
-    },
-    {
-      name: t('featuresPage.environments.spaceStation.name'),
-      description: t('featuresPage.environments.spaceStation.description'),
-      gradient: 'from-indigo-600 to-slate-900'
-    },
-  ]
+  const { t } = useTranslation()
 
   const adaptiveCards = [
     {

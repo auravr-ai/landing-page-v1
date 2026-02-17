@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { Menu, X, Code, Moon, Sun } from "lucide-react"
+import { Menu, X, Moon, Sun } from "lucide-react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 import { useTranslation } from "react-i18next"
@@ -15,7 +15,6 @@ import {
   MenubarItem,
   MenubarMenu,
   MenubarSeparator,
-  MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/menubar"
 import { Logo } from "@/components/ui/logo"

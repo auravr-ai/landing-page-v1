@@ -1,4 +1,5 @@
 "use client"
+/* eslint-disable @next/next/no-img-element */
 
 import { useEffect, useRef, type ReactNode } from "react"
 import { gsap } from "gsap"
@@ -79,7 +80,9 @@ export function GridMotion({ items = [], gradientColor = "black", className }: G
             <div
               key={rowIndex}
               className="grid gap-4 grid-cols-[repeat(7,1fr)] will-change-transform will-change-filter"
-              ref={(el) => (rowRefs.current[rowIndex] = el)}
+              ref={(el) => {
+                rowRefs.current[rowIndex] = el
+              }}
             >
               {[...Array(7)].map((_, itemIndex) => {
                 const content = combinedItems[rowIndex * 7 + itemIndex]

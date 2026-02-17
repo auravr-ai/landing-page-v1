@@ -2,25 +2,25 @@
 
 import * as React from "react"
 import { Trophy, Award, Users as UsersIcon, TrendingUp, BookOpen, Star } from "lucide-react"
-import { motion } from "framer-motion"
+import { motion, type Variants } from "framer-motion"
 import { useTranslation } from "react-i18next"
 import { Card, CardHeader, CardContent } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { cn } from "@/lib/utils"
 
-const fadeInVariants = {
+const fadeInVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { 
     opacity: 1, 
     y: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut"
+      ease: "easeOut",
     }
   }
 }
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -58,40 +58,55 @@ function getInitials(name: string) {
 export default function TeamPage() {
   const { t } = useTranslation()
 
+  type TeamMember = { name: string; role: string; bio: string }
+
   const teamMembers = React.useMemo(() => {
-    const data = t("teamPage.teamMembers", { returnObjects: true }) as Record<string, any>
+    const data = t("teamPage.teamMembers", { returnObjects: true }) as Record<string, TeamMember | { title?: string }>
     if (!data) return []
 
     return Object.entries(data)
       .filter(([key]) => key !== "title")
-      .map(([, member], index) => ({
-        ...member,
-        avatarColor: teamAvatarColors[index % teamAvatarColors.length],
-      }))
+      .map(([, member], index) => {
+        const typedMember = member as TeamMember
+        return {
+          ...typedMember,
+          avatarColor: teamAvatarColors[index % teamAvatarColors.length],
+        }
+      })
   }, [t])
+
+  type Advisor = { name: string; role: string; bio: string }
 
   const advisors = React.useMemo(() => {
-    const data = t("teamPage.advisors", { returnObjects: true }) as Record<string, any>
+    const data = t("teamPage.advisors", { returnObjects: true }) as Record<string, Advisor | { title?: string }>
     if (!data) return []
 
     return Object.entries(data)
       .filter(([key]) => key !== "title")
-      .map(([, advisor], index) => ({
-        ...advisor,
-        avatarColor: advisorAvatarColors[index % advisorAvatarColors.length],
-      }))
+      .map(([, advisor], index) => {
+        const typedAdvisor = advisor as Advisor
+        return {
+          ...typedAdvisor,
+          avatarColor: advisorAvatarColors[index % advisorAvatarColors.length],
+        }
+      })
   }, [t])
 
+  type Achievement = { title: string; description: string; year: string }
+
   const achievements = React.useMemo(() => {
-    const data = t("teamPage.achievements", { returnObjects: true }) as Record<string, any>
+    const data = t("teamPage.achievements", { returnObjects: true }) as Record<string, Achievement | { title?: string }>
     if (!data) return []
 
     return Object.entries(data)
       .filter(([key]) => key !== "title")
-      .map(([, achievement], index) => ({
-        ...achievement,
-        icon: achievementIcons[index % achievementIcons.length],
-      }))
+      .map(([, achievement], index) => {
+        const typedAchievement = achievement as Achievement
+        return {
+          ...typedAchievement,
+          icon: achievementIcons[index % achievementIcons.length],
+        }
+      })
   }, [t])
 
   return (

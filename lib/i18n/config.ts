@@ -1,6 +1,5 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
 
 import enTranslation from '@/locales/en/translation.json';
 import zhTWTranslation from '@/locales/zh-TW/translation.json';
@@ -15,19 +14,16 @@ const resources = {
 };
 
 i18n
-  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,
+    lng: 'en',
     fallbackLng: 'en',
+    supportedLngs: ['en', 'zh-TW'],
     interpolation: {
       escapeValue: false,
     },
-    detection: {
-      order: ['querystring', 'localStorage', 'navigator'],
-      caches: ['localStorage'],
-      lookupQuerystring: 'lng',
-    },
+    // Language is set manually on the client to avoid SSR/CSR mismatches.
   });
 
 export default i18n;

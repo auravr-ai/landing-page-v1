@@ -1,10 +1,11 @@
 "use client"
+/* eslint-disable @next/next/no-img-element */
 
 import * as React from "react"
 import Link from "next/link"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
-import { ArrowRight, ChevronRight, Zap, Settings2, Sparkles } from "lucide-react"
+import { ChevronRight, Zap, Settings2, Sparkles } from "lucide-react"
 import { motion, type Variants } from "framer-motion"
 import { useTranslation } from "react-i18next"
 
@@ -128,7 +129,7 @@ const transitionVariants = {
       },
     },
   },
-}
+} satisfies { item: Variants }
 
 const CardDecorator = ({ children }: { children: React.ReactNode }) => (
   <div
