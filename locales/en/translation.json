@@ -65,7 +65,7 @@
   },
   "featuresPage": {
     "title": "Product Features",
-    "subtitle": "Discover the immersive therapy tools that combine playful VR, adaptive AI, and real-world readiness",
+    "subtitle": "Discover the immersive therapy tools that\ncombine playful VR, adaptive AI, and real-world readiness",
     "keyFeatures": {
       "title": "Adaptive Learning in Action",
       "personalizedPrograms": {
@@ -78,7 +78,7 @@
       },
       "therapistToolkit": {
         "title": "Therapist Dashboard & Insights",
-        "description": "Clinicians can set goals, tweak sensory load, and review session data with actionable insights that turn every game session into measurable growth.",
+        "description": "Clinicians can set goals, manage the level of sensory input, and review session data with actionable insights that turn every game session into measurable growth.",
         "bullet1": "Live session controls and safety overrides",
         "bullet2": "Session recordings with milestone tagging",
         "bullet3": "Evidence-based templates to speed planning",
@@ -99,15 +99,15 @@
       "scenes": {
         "school": {
           "title": "School Argument De-escalation",
-          "description": "Recreate classroom or hallway disagreements so children can practice calm communication, turn-taking, and perspective-taking before real-world conflicts happen."
+          "description": "Recreate classroom or hallway disagreements so children can practice effective communication, turn-taking, and perspective-taking, equipping them with essential social and emotional skills to cope with real-world conflicts."
         },
         "home": {
           "title": "Home Routine & Transitions",
-          "description": "Practice morning and bedtime routines, requesting help, and managing sensory overload at home with repeatable, guided prompts."
+          "description": "Practice morning and bedtime routines, expressing needs and emotions, and promoting relationships with siblings and parents at home with repeatable, guided prompts."
         },
         "park": {
           "title": "Park & Community Outings",
-          "description": "Role-play playground sharing, waiting turns, and safely navigating community spaces with therapist-controlled pacing."
+          "description": "Role-play playground sharing, turn taking, managing sensory overload, and safely navigating community spaces with therapist-controlled pacing."
         }
       }
     },
@@ -147,59 +147,74 @@
       "member1": {
         "name": "Jake Liu",
         "role": "Co-Founder & CEO",
-        "bio": "HKU Mathematics & Entrepreneurship, Experienced in Business Development"
+        "bio": "HKU Mathematics & Entrepreneurship"
       },
       "member2": {
         "name": "Victor Chui",
         "role": "Co-Founder & CTO",
-        "bio": "HKU Computer Science, Experienced in Game Development and AI Systems"
+        "bio": "HKU Computer Science"
       },
       "member3": {
         "name": "Alison Li",
         "role": "Co-Founder & CPO",
-        "bio": "PolyU Occupational Therapy, Experienced in Autism Treatment"
+        "bio": "PolyU Occupational Therapy"
       },
       "member4": {
         "name": "Kitty Sham",
         "role": "Research Manager",
-        "bio": "HKU Medicine, Experienced in Paediatrics"
+        "bio": "HKU Medicine"
       },
       "member5": {
         "name": "Amy Lee",
         "role": "Research Officer",
-        "bio": "HKU Speech and Hearing Sciences, Experienced in Autism Assessment"
+        "bio": "HKU Speech and Hearing Sciences"
       },
       "member6": {
         "name": "Fung Pun",
         "role": "Software Developer",
-        "bio": "HKU Computer Science, Experienced in Full Stack Development"
+        "bio": "HKU Computer Science"
       }
     },
     "advisors": {
       "title": "Advisors",
+      "advisor0": {
+        "name": "Prof. Yuk Lam Lo",
+        "role": "Business Development Advisor",
+        "bio": "Honorary Chairman, Hong Kong Biotechnology Organization"
+      },
+      "advisor0b": {
+        "name": "Dr. Eric Lai",
+        "role": "Medical Research Advisor",
+        "bio": "Clinical Assistant Professor at HKU Medicine"
+      },
       "advisor1": {
         "name": "Prof. Yvonne Han",
-        "role": "Research Advisor",
+        "role": "OT Research Advisor",
         "bio": "Program Leader at PolyU Occupational Therapy "
       },
       "advisor2": {
         "name": "Prof. Kathy Shum",
-        "role": "Research Advisor",
+        "role": "Psychology Research Advisor",
         "bio": "Associate Professor at HKU Psychology"
       },
       "advisor3": {
         "name": "Prof. Will Chien",
-        "role": "Research Advisor",
+        "role": "OT Research Advisor",
         "bio": "Associate Professor at PolyU Occupational Therapy"
       },
       "advisor4": {
         "name": "Mr. Johnny Lam",
-        "role": "Clinical Advisor",
+        "role": "OT SeniorClinical Advisor",
         "bio": "Seasoned Paediatrics OT"
+      },
+      "advisor4b": {
+        "name": "Ms. Carmela Tin",
+        "role": "ST Clinical Advisor",
+        "bio": "Assistant Lecturer at HKU Faculty of Education"
       },
       "advisor5": {
         "name": "Mr. Eddie Lui",
-        "role": "Clinical Advisor",
+        "role": "OT Clinical Advisor",
         "bio": "Paediatrics OT of Practice"
       }
     },
@@ -216,7 +231,7 @@
         "year": "2026"
       },
       "award3": {
-        "title": "HKSTP Ideation",
+        "title": "Cyberport Creative Micro Fund",
         "description": "Participant",
         "year": "2026"
       }
@@ -225,7 +240,7 @@
   "waitlistPage": {
     "badge": "Limited early access",
     "title": "Join the AURA waitlist",
-    "subtitle": "Reserve your spot for the next wave of immersive autism therapy pilots. We prioritize teams with clear clinical and education use cases.",
+    "subtitle": "Reserve your spot for the next wave of immersive autism treatment pilots. We prioritize teams with clear clinical and education use cases.",
     "whyJoin": {
       "title": "Why teams join now",
       "description": "Early partners help shape workflows before general launch."
@@ -263,7 +278,7 @@
         },
         "role": {
           "label": "Your role",
-          "placeholder": "Founder, Therapist, Product Lead"
+          "placeholder": "Therapist, Product Lead"
         },
         "teamSize": {
           "label": "Team size",

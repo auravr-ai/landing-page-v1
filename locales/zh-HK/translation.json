@@ -4,10 +4,10 @@
       "home": "首頁",
       "features": "產品特色",
       "team": "我們的團隊",
-      "getStarted": "開始使用"
+      "getStarted": "立即開始"
     },
     "login": "登入",
-    "getStarted": "加入等候名單"
+    "getStarted": "加入候補名單"
   },
   "hero": {
     "titleStart": "推動",
@@ -16,7 +16,7 @@
     "description": "我們透過沉浸式 VR 遊戲、個人化學習方案與 AI 驅動的自適應情境，將傳統自閉症治療轉化為既有趣又有效的體驗。",
     "consultation": "產品特色",
     "viewWork": "我們的團隊",
-    "readyToStart": "準備好開始你的專案了嗎？"
+    "readyToStart": "準備好開始你的項目了嗎？"
   },
   "features": {
     "title": "為何選擇",
@@ -65,7 +65,7 @@
   },
   "featuresPage": {
     "title": "產品特色",
-    "subtitle": "探索結合趣味 VR、適應性 AI 與真實情境準備的沉浸式治療工具",
+    "subtitle": "探索結合趣味 VR、適應性 AI 與真實情境準備的\n沉浸式治療工具",
     "keyFeatures": {
       "title": "適應式學習進行中",
       "personalizedPrograms": {
@@ -78,7 +78,7 @@
       },
       "therapistToolkit": {
         "title": "治療師控制台與洞察",
-        "description": "臨床人員可設定目標、調整感官負荷，並檢視具行動意義的課程數據，將每場遊戲化為可衡量的成長。",
+        "description": "臨床人員可設定目標、管理感官輸入程度，並檢視具行動意義的課程數據，將每場遊戲化為可衡量的成長。",
         "bullet1": "即時課程控制與安全覆蓋",
         "bullet2": "課程錄影與里程碑標註",
         "bullet3": "循證模板加速規劃",
@@ -99,15 +99,15 @@
       "scenes": {
         "school": {
           "title": "校園爭執降溫",
-          "description": "重現課室或走廊的爭執，讓孩子在現實衝突發生前練習冷靜溝通、輪流與同理心。"
+          "description": "重現課室或走廊的爭執，讓孩子練習有效溝通、輪流與換位思考，建立應對現實衝突所需的社交與情緒技能。"
         },
         "home": {
           "title": "家中日常與轉換",
-          "description": "透過可重複、具指導的提示，練習早晚例行、公詢協助，以及在家中管理感官過載。"
+          "description": "透過可重複、具指導的提示，練習早晚例行、表達需要與情緒，並促進與兄弟姊妹及父母的關係。"
         },
         "park": {
           "title": "公園與社區外出",
-          "description": "角色扮演遊樂場分享、輪流等待，並在治療師控制節奏下安全地探索社區空間。"
+          "description": "角色扮演遊樂場分享、輪流、管理感官過載，並在治療師控制節奏下安全地探索社區空間。"
         }
       }
     },
@@ -147,36 +147,46 @@
       "member1": {
         "name": "Jake Liu",
         "role": "共同創辦人兼執行長",
-        "bio": "香港大學數學與創業背景，具商務拓展經驗"
+        "bio": "香港大學數學與創業背景"
       },
       "member2": {
         "name": "Victor Chui",
         "role": "共同創辦人兼技術長",
-        "bio": "香港大學計算機科學，擅長遊戲開發與 AI 系統"
+        "bio": "香港大學計算機科學"
       },
       "member3": {
         "name": "Alison Li",
         "role": "共同創辦人兼產品長",
-        "bio": "理大職業治療背景，具自閉症治療經驗"
+        "bio": "理大職業治療背景"
       },
       "member4": {
         "name": "Kitty Sham",
         "role": "研究經理",
-        "bio": "香港大學醫學背景，專長兒科"
+        "bio": "香港大學醫學背景"
       },
       "member5": {
         "name": "Amy Lee",
         "role": "研究主任",
-        "bio": "香港大學言語及聽覺科學，具自閉症評估經驗"
+        "bio": "香港大學言語及聽覺科學"
       },
       "member6": {
         "name": "Fung Pun",
         "role": "軟件開發人員",
-        "bio": "香港大學計算機科學，具全端開發經驗"
+        "bio": "香港大學計算機科學"
       }
     },
     "advisors": {
       "title": "顧問",
+      "advisor0": {
+        "name": "Dr. Advisor A",
+        "role": "研究顧問",
+        "bio": "資料稍後更新"
+      },
+      "advisor0b": {
+        "name": "Dr. Advisor B",
+        "role": "研究顧問",
+        "bio": "資料稍後更新"
+      },
       "advisor1": {
         "name": "Prof. Yvonne Han",
         "role": "研究顧問",
@@ -197,6 +207,11 @@
         "role": "臨床顧問",
         "bio": "資深兒科職業治療師"
       },
+      "advisor4b": {
+        "name": "Mr. Advisor C",
+        "role": "臨床顧問",
+        "bio": "資料稍後更新"
+      },
       "advisor5": {
         "name": "Mr. Eddie Lui",
         "role": "臨床顧問",
@@ -216,7 +231,7 @@
         "year": "2026"
       },
       "award3": {
-        "title": "HKSTP Ideation",
+        "title": "Cyberport Creative Micro Fund",
         "description": "參與者",
         "year": "2026"
       }
@@ -224,7 +239,7 @@
   },
   "waitlistPage": {
     "badge": "限量早鳥名額",
-    "title": "加入 AURA 等候名單",
+    "title": "加入 AURA 候補名單",
     "subtitle": "預留你的名額，加入下一波沉浸式自閉症治療試點。我們會優先考慮具清晰臨床或教育場景的團隊。",
     "whyJoin": {
       "title": "為什麼現在加入",
@@ -232,8 +247,8 @@
     },
     "highlights": {
       "priorityOnboarding": {
-        "title": "優先導入支援",
-        "description": "搶先加入私人測試，並由我們團隊提供導入指引。"
+        "title": "優先上線支援",
+        "description": "搶先加入私人測試，並由我們團隊提供上線指引。"
       },
       "founderUpdates": {
         "title": "創辦團隊更新",
@@ -245,16 +260,16 @@
       }
     },
     "form": {
-      "title": "申請搶先體驗",
+      "title": "申請優先體驗",
       "description": "告訴我們你的團隊，以及你打算如何使用 AURA。",
-      "success": "你已成功加入名單。我們會在名額開放時寄信到 {{email}}。",
+      "success": "你已成功加入候補名單。我們會在名額開放時寄信到 {{email}}。",
       "fields": {
         "fullName": {
           "label": "姓名",
           "placeholder": "陳小美"
         },
         "workEmail": {
-          "label": "工作信箱",
+          "label": "工作電郵",
           "placeholder": "jane@company.com"
         },
         "company": {
@@ -263,7 +278,7 @@
         },
         "role": {
           "label": "你的職位",
-          "placeholder": "創辦人、治療師、產品負責人"
+          "placeholder": "治療師、產品負責人"
         },
         "teamSize": {
           "label": "團隊規模",
@@ -283,7 +298,7 @@
         }
       },
       "submit": {
-        "idle": "加入等候名單",
+        "idle": "加入候補名單",
         "loading": "正在為你保留名額..."
       },
       "legal": "加入後，你同意接收產品更新通知，你可隨時取消訂閱。"
@@ -291,8 +306,8 @@
     "validation": {
       "fullNameMin": "請輸入你的姓名。",
       "fullNameMax": "姓名長度過長。",
-      "workEmailRequired": "請輸入工作信箱。",
-      "workEmailInvalid": "請輸入有效的電子郵件地址。",
+      "workEmailRequired": "請輸入工作電郵。",
+      "workEmailInvalid": "請輸入有效的電郵地址。",
       "companyMin": "請輸入公司或機構名稱。",
       "companyMax": "公司或機構名稱長度過長。",
       "roleMin": "請輸入你的職位。",
@@ -304,7 +319,7 @@
     "submitErrors": {
       "databaseMissing": "資料庫尚未設定。請在伺服器環境變數加入 DATABASE_URL（可選 DIRECT_URL）。",
       "databaseConnection": "無法連線到資料庫。請檢查 Supabase 密碼與連線字串。",
-      "duplicateEmail": "這個信箱已在等候名單中。",
+      "duplicateEmail": "這個電郵已在候補名單中。",
       "tableMissing": "找不到 public.waitlist 資料表。請先執行 `npm run prisma:push`。",
       "columnMismatch": "waitlist 欄位與目前程式 schema 不一致。請執行 `npm run prisma:push`。",
       "fallback": "儲存失敗，請稍後再試。",

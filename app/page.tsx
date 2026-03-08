@@ -5,9 +5,10 @@ import * as React from "react"
 import Link from "next/link"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
-import { ChevronRight, Zap, Settings2, Sparkles } from "lucide-react"
+import { ChevronRight, Pencil, Gamepad2, Lock } from "lucide-react"
 import { motion, type Variants } from "framer-motion"
 import { useTranslation } from "react-i18next"
+import { addLocaleToHref, normalizeLocale } from "@/lib/i18n/locale"
 
 function cn(...classes: (string | undefined | null | boolean)[]): string {
   return classes.filter(Boolean).join(" ")
@@ -144,9 +145,16 @@ const CardDecorator = ({ children }: { children: React.ReactNode }) => (
 )
 
 export default function SoftwareDevelopmentWebsite() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const videoRef = React.useRef<HTMLVideoElement>(null)
   const [isPlaying, setIsPlaying] = React.useState(false)
+  const firstLogoLightSrc = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqFysUtPN5u43WkrOohJ4yPLAJX-VCdkLQ1A&s"
+  const firstLogoDarkSrc = "https://www.cyberport.hk/wp-content/uploads/cyberport-logo-white-1.svg"
+  const activeLocale = normalizeLocale(i18n.resolvedLanguage || i18n.language)
+  const localeHref = React.useCallback(
+    (href: string) => addLocaleToHref(href, activeLocale),
+    [activeLocale],
+  )
 
   const handlePlayClick = () => {
     const video = videoRef.current
@@ -204,7 +212,7 @@ export default function SoftwareDevelopmentWebsite() {
                 >
                   <div key={1} className="bg-purple-600/10 rounded-[14px] border border-purple-300 p-0.5">
                     <Button asChild size="lg" className="rounded-xl px-5 text-base bg-purple-600 hover:bg-purple-700">
-                      <Link href="/features">
+                      <Link href={localeHref("/features")}>
                         <span className="text-nowrap">{t('hero.consultation')}</span>
                       </Link>
                     </Button>
@@ -216,7 +224,7 @@ export default function SoftwareDevelopmentWebsite() {
                     variant="ghost"
                     className="h-10.5 rounded-xl px-5 hover:text-purple-600"
                   >
-                    <Link href="/team">
+                    <Link href={localeHref("/team")}>
                       <span className="text-nowrap">{t('hero.viewWork')}</span>
                     </Link>
                   </Button>
@@ -237,7 +245,7 @@ export default function SoftwareDevelopmentWebsite() {
                 ...transitionVariants,
               }}
             >
-              <div className="relative -mr-56 mt-8 overflow-hidden px-2 sm:mr-0 sm:mt-12 md:mt-20">
+              <div className="relative mt-8 overflow-hidden px-2 sm:mt-12 md:mt-20">
                 <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-5xl overflow-hidden rounded-2xl border border-purple-300 p-4 shadow-lg shadow-purple-600/15 ring-1">
                   <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-950 dark:to-purple-900 aspect-video relative rounded-2xl border border-purple-300 overflow-hidden">
                     <video
@@ -271,37 +279,40 @@ export default function SoftwareDevelopmentWebsite() {
               <section className="bg-background pb-6 pt-10 md:pb-12 md:pt-12">
                 <div className="group relative m-auto max-w-5xl px-6">
                   <div className="absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 duration-500 group-hover:scale-100 group-hover:opacity-100">
-                    <a href="#contact" className="block text-sm duration-150 hover:opacity-75 text-purple-600">
+                    <Link href={localeHref("/waitlist")} className="block text-sm duration-150 hover:opacity-75 text-purple-600">
                       <span>{t('hero.readyToStart')}</span>
                       <ChevronRight className="ml-1 inline-block size-3" />
-                    </a>
+                    </Link>
                   </div>
-                  <div className="group-hover:blur-xs mx-auto mt-12 grid max-w-2xl grid-cols-3 place-items-center gap-x-12 gap-y-8 transition-all duration-500 group-hover:opacity-50 sm:gap-x-16 sm:gap-y-14">
-                    <div className="flex">
+                  <div className="group-hover:blur-xs mx-auto mt-12 grid w-full max-w-3xl grid-cols-1 place-items-center gap-x-8 gap-y-6 transition-all duration-500 group-hover:opacity-50 min-[420px]:grid-cols-2 sm:gap-x-10 sm:gap-y-8 lg:grid-cols-3 lg:gap-x-12">
+                    <div className="flex h-16 w-full items-center justify-center rounded-xl px-4">
                       <img
-                        className="mx-auto h-8 w-auto dark:[filter:brightness(0)_invert(1)] opacity-70"
-                        src="https://www.ent-fund.org/uploads/images/common/header/logo_en.png"
-                        alt="Client Logo"
-                        height="20"
-                        width="auto"
+                        className="max-h-10 w-full max-w-[220px] object-contain opacity-75 transition-opacity dark:hidden"
+                        src={firstLogoLightSrc}
+                        alt="Client logo"
+                        loading="lazy"
+                      />
+                      <img
+                        className="hidden max-h-10 w-full max-w-[220px] object-contain transition-opacity dark:block dark:grayscale dark:opacity-70"
+                        src={firstLogoDarkSrc}
+                        alt="Client logo (dark mode)"
+                        loading="lazy"
                       />
                     </div>
-                    <div className="flex">
+                    <div className="flex h-14 w-full items-center justify-center rounded-xl px-4">
                       <img
-                        className="mx-auto h-14 w-auto dark:[filter:invert(1)_brightness(0)_invert(1)] opacity-70"
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/HKSTP.png/1920px-HKSTP.png?20231029013544"
-                        alt="Client Logo"
-                        height="16"
-                        width="auto"
+                        className="max-h-12 w-full max-w-[190px] object-contain opacity-75 transition-opacity dark:brightness-0 dark:invert dark:opacity-65"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/500px-Amazon_Web_Services_Logo.svg.png"
+                        alt="AWS logo"
+                        loading="lazy"
                       />
                     </div>
-                    <div className="flex">
+                    <div className="flex h-16 w-full items-center justify-center rounded-xl px-4 min-[420px]:col-span-2 lg:col-span-1">
                       <img
-                        className="mx-auto h-8 w-auto dark:[filter:invert(1)_brightness(0)_invert(1)] opacity-70"
+                        className="max-h-11 w-full max-w-[300px] object-contain opacity-75 transition-opacity dark:brightness-0 dark:invert dark:opacity-65"
                         src="https://www.med.hku.hk/-/media/HKU-Med-Fac/Header/HKU_LKS-Faculty-of-Medicine_Mast-390x60.png"
-                        alt="Client Logo"
-                        height="16"
-                        width="auto"
+                        alt="HKU Med logo"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -325,7 +336,7 @@ export default function SoftwareDevelopmentWebsite() {
               <div className="group shadow-zinc-950/5">
                 <CardHeader className="pb-3">
                   <CardDecorator>
-                    <Zap className="size-6 text-purple-600" aria-hidden />
+                    <Pencil className="size-6 text-purple-600" aria-hidden />
                   </CardDecorator>
 
                   <h3 className="mt-6 font-medium">{t('features.fastDevelopment.title')}</h3>
@@ -341,7 +352,7 @@ export default function SoftwareDevelopmentWebsite() {
               <div className="group shadow-zinc-950/5">
                 <CardHeader className="pb-3">
                   <CardDecorator>
-                    <Settings2 className="size-6 text-purple-600" aria-hidden />
+                    <Gamepad2 className="size-6 text-purple-600" aria-hidden />
                   </CardDecorator>
 
                   <h3 className="mt-6 font-medium">{t('features.scalable.title')}</h3>
@@ -357,7 +368,7 @@ export default function SoftwareDevelopmentWebsite() {
               <div className="group shadow-zinc-950/5">
                 <CardHeader className="pb-3">
                   <CardDecorator>
-                    <Sparkles className="size-6 text-purple-600" aria-hidden />
+                    <Lock className="size-6 text-purple-600" aria-hidden />
                   </CardDecorator>
 
                   <h3 className="mt-6 font-medium">{t('features.modern.title')}</h3>
