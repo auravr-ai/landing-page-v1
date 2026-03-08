@@ -178,43 +178,43 @@
     "advisors": {
       "title": "顧問",
       "advisor0": {
-        "name": "Dr. Advisor A",
-        "role": "研究顧問",
-        "bio": "資料稍後更新"
+        "name": "Prof. Yuk Lam Lo",
+        "role": "商業發展顧問",
+        "bio": "香港生物科技協會名譽創會主席"
       },
       "advisor0b": {
-        "name": "Dr. Advisor B",
-        "role": "研究顧問",
-        "bio": "資料稍後更新"
+        "name": "Dr. Eric Lai",
+        "role": "醫學研究顧問",
+        "bio": "香港大學醫學院臨床助理教授"
       },
       "advisor1": {
         "name": "Prof. Yvonne Han",
-        "role": "研究顧問",
-        "bio": "理大職業治療課程主任"
+        "role": "職業治療研究顧問",
+        "bio": "香港理工大學職業治療課程主任"
       },
       "advisor2": {
         "name": "Prof. Kathy Shum",
-        "role": "研究顧問",
+        "role": "心理學研究顧問",
         "bio": "香港大學心理學副教授"
       },
       "advisor3": {
         "name": "Prof. Will Chien",
-        "role": "研究顧問",
-        "bio": "理大職業治療副教授"
+        "role": "職業治療研究顧問",
+        "bio": "香港理工大學職業治療副教授"
       },
       "advisor4": {
         "name": "Mr. Johnny Lam",
-        "role": "臨床顧問",
+        "role": "職業治療資深臨床顧問",
         "bio": "資深兒科職業治療師"
       },
       "advisor4b": {
-        "name": "Mr. Advisor C",
-        "role": "臨床顧問",
-        "bio": "資料稍後更新"
+        "name": "Ms. Carmela Tin",
+        "role": "言語治療臨床顧問",
+        "bio": "香港大學教育學院助理講師"
       },
       "advisor5": {
         "name": "Mr. Eddie Lui",
-        "role": "臨床顧問",
+        "role": "職業治療臨床顧問",
         "bio": "執業兒科職業治療師"
       }
     },
