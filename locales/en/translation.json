@@ -221,5 +221,94 @@
         "year": "2026"
       }
     }
+  },
+  "waitlistPage": {
+    "badge": "Limited early access",
+    "title": "Join the AURA waitlist",
+    "subtitle": "Reserve your spot for the next wave of immersive autism therapy pilots. We prioritize teams with clear clinical and education use cases.",
+    "whyJoin": {
+      "title": "Why teams join now",
+      "description": "Early partners help shape workflows before general launch."
+    },
+    "highlights": {
+      "priorityOnboarding": {
+        "title": "Priority onboarding",
+        "description": "Get first access to private beta with guided setup from our team."
+      },
+      "founderUpdates": {
+        "title": "Founder updates",
+        "description": "Receive product drops, roadmap previews, and experiment invites."
+      },
+      "clinicalTrust": {
+        "title": "Built for clinical trust",
+        "description": "Designed with therapists and researchers to stay safe and practical."
+      }
+    },
+    "form": {
+      "title": "Apply for early access",
+      "description": "Tell us about your team and how you plan to use AURA.",
+      "success": "You are on the list. We will email {{email}} when a slot opens.",
+      "fields": {
+        "fullName": {
+          "label": "Full name",
+          "placeholder": "Jane Chan"
+        },
+        "workEmail": {
+          "label": "Work email",
+          "placeholder": "jane@company.com"
+        },
+        "company": {
+          "label": "Company or organization",
+          "placeholder": "AURA Health"
+        },
+        "role": {
+          "label": "Your role",
+          "placeholder": "Founder, Therapist, Product Lead"
+        },
+        "teamSize": {
+          "label": "Team size",
+          "description": "We use this to plan onboarding waves.",
+          "options": {
+            "size1to5": "1-5 people",
+            "size6to20": "6-20 people",
+            "size21to50": "21-50 people",
+            "size51to200": "51-200 people",
+            "size201plus": "201+ people"
+          }
+        },
+        "useCase": {
+          "label": "How would your team use AURA?",
+          "placeholder": "Describe your therapy, education, or pilot goals...",
+          "description": "30 to 500 characters."
+        }
+      },
+      "submit": {
+        "idle": "Join waitlist",
+        "loading": "Saving your spot..."
+      },
+      "legal": "By joining, you agree to receive product updates. You can unsubscribe anytime."
+    },
+    "validation": {
+      "fullNameMin": "Please enter your full name.",
+      "fullNameMax": "Name is too long.",
+      "workEmailRequired": "Work email is required.",
+      "workEmailInvalid": "Please enter a valid email address.",
+      "companyMin": "Please enter your company name.",
+      "companyMax": "Company name is too long.",
+      "roleMin": "Please enter your role.",
+      "roleMax": "Role is too long.",
+      "teamSizeRequired": "Please select your team size.",
+      "useCaseMin": "Tell us a bit more about how you plan to use AURA.",
+      "useCaseMax": "Please keep this under 500 characters."
+    },
+    "submitErrors": {
+      "databaseMissing": "Database is not configured. Add DATABASE_URL (and optionally DIRECT_URL) to your server environment.",
+      "databaseConnection": "Cannot connect to the database. Check your Supabase password/connection string.",
+      "duplicateEmail": "This email is already on the waitlist.",
+      "tableMissing": "Table public.waitlist was not found. Run `npm run prisma:push` first.",
+      "columnMismatch": "Waitlist table columns do not match the app schema. Run `npm run prisma:push`.",
+      "fallback": "Failed to save your request.",
+      "unexpected": "We could not submit your request. Please try again."
+    }
   }
 }

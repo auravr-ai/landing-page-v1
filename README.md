@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+Install dependencies and run the dev server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Supabase + Prisma Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project writes waitlist entries through Prisma to Supabase Postgres.
 
-## Learn More
+1. In Supabase, open `Project Settings -> Database -> Connection string`.
+2. Copy both URLs:
+   - pooled connection (`6543`) for `DATABASE_URL`
+   - direct connection (`5432`) for `DIRECT_URL` (used by Prisma schema changes)
+3. Add to `.env.local`:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+DATABASE_URL="postgresql://postgres.<project-ref>:<password>@aws-0-<region>.pooler.supabase.com:6543/postgres?pgbouncer=true&connection_limit=1&sslmode=require"
+DIRECT_URL="postgresql://postgres:<password>@db.<project-ref>.supabase.co:5432/postgres?sslmode=require"
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Use your real database password from Supabase. Do not leave placeholders like `[YOUR-PASSWORD]`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Run:
 
-## Deploy on Vercel
+```bash
+npm run prisma:generate
+npm run prisma:push
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+These scripts load variables from `.env.local` automatically.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. Start the app with `npm run dev`.
+
+## Waitlist Table
+
+Prisma model: `prisma/schema.prisma` (`Waitlist`, mapped to table `waitlist`).

@@ -138,7 +138,9 @@ export function Header() {
                       <Link href="/team">
                         <MenubarItem>{t('header.menu.team')}</MenubarItem>
                       </Link>
-                      <MenubarItem>{t('header.menu.getStarted')}</MenubarItem>
+                      <Link href="/waitlist">
+                        <MenubarItem>{t('header.menu.getStarted')}</MenubarItem>
+                      </Link>
                     </MenubarGroup>
                     <MenubarSeparator />
                     <MenubarGroup>
@@ -195,10 +197,13 @@ export function Header() {
                   <span>{t('header.login')}</span>
                 </Button>
                 <Button
+                  asChild
                   size="sm"
                   className="bg-purple-600 hover:bg-purple-700"
                 >
-                  <span>{t('header.getStarted')}</span>
+                  <Link href="/waitlist">
+                    <span>{t('header.getStarted')}</span>
+                  </Link>
                 </Button> 
               </div>
             </div>

@@ -221,5 +221,94 @@
         "year": "2026"
       }
     }
+  },
+  "waitlistPage": {
+    "badge": "限量早鳥名額",
+    "title": "加入 AURA 等候名單",
+    "subtitle": "預留你的名額，加入下一波沉浸式自閉症治療試點。我們會優先考慮具清晰臨床或教育場景的團隊。",
+    "whyJoin": {
+      "title": "為什麼現在加入",
+      "description": "早期合作夥伴可在正式上線前共同塑造產品流程。"
+    },
+    "highlights": {
+      "priorityOnboarding": {
+        "title": "優先導入支援",
+        "description": "搶先加入私人測試，並由我們團隊提供導入指引。"
+      },
+      "founderUpdates": {
+        "title": "創辦團隊更新",
+        "description": "率先收到新功能上線、產品路線圖與實驗邀請。"
+      },
+      "clinicalTrust": {
+        "title": "以臨床可信度打造",
+        "description": "與治療師及研究人員共同設計，兼顧安全與實務可行性。"
+      }
+    },
+    "form": {
+      "title": "申請搶先體驗",
+      "description": "告訴我們你的團隊，以及你打算如何使用 AURA。",
+      "success": "你已成功加入名單。我們會在名額開放時寄信到 {{email}}。",
+      "fields": {
+        "fullName": {
+          "label": "姓名",
+          "placeholder": "陳小美"
+        },
+        "workEmail": {
+          "label": "工作信箱",
+          "placeholder": "jane@company.com"
+        },
+        "company": {
+          "label": "公司或機構",
+          "placeholder": "AURA Health"
+        },
+        "role": {
+          "label": "你的職位",
+          "placeholder": "創辦人、治療師、產品負責人"
+        },
+        "teamSize": {
+          "label": "團隊規模",
+          "description": "我們會依此安排分批上線。",
+          "options": {
+            "size1to5": "1-5 人",
+            "size6to20": "6-20 人",
+            "size21to50": "21-50 人",
+            "size51to200": "51-200 人",
+            "size201plus": "201 人以上"
+          }
+        },
+        "useCase": {
+          "label": "你的團隊會如何使用 AURA？",
+          "placeholder": "請描述你的治療、教育或試點目標...",
+          "description": "請輸入 30 到 500 個字。"
+        }
+      },
+      "submit": {
+        "idle": "加入等候名單",
+        "loading": "正在為你保留名額..."
+      },
+      "legal": "加入後，你同意接收產品更新通知，你可隨時取消訂閱。"
+    },
+    "validation": {
+      "fullNameMin": "請輸入你的姓名。",
+      "fullNameMax": "姓名長度過長。",
+      "workEmailRequired": "請輸入工作信箱。",
+      "workEmailInvalid": "請輸入有效的電子郵件地址。",
+      "companyMin": "請輸入公司或機構名稱。",
+      "companyMax": "公司或機構名稱長度過長。",
+      "roleMin": "請輸入你的職位。",
+      "roleMax": "職位名稱長度過長。",
+      "teamSizeRequired": "請選擇團隊規模。",
+      "useCaseMin": "請多分享一些你打算如何使用 AURA。",
+      "useCaseMax": "請將內容控制在 500 個字內。"
+    },
+    "submitErrors": {
+      "databaseMissing": "資料庫尚未設定。請在伺服器環境變數加入 DATABASE_URL（可選 DIRECT_URL）。",
+      "databaseConnection": "無法連線到資料庫。請檢查 Supabase 密碼與連線字串。",
+      "duplicateEmail": "這個信箱已在等候名單中。",
+      "tableMissing": "找不到 public.waitlist 資料表。請先執行 `npm run prisma:push`。",
+      "columnMismatch": "waitlist 欄位與目前程式 schema 不一致。請執行 `npm run prisma:push`。",
+      "fallback": "儲存失敗，請稍後再試。",
+      "unexpected": "提交失敗，請稍後再試。"
+    }
   }
 }

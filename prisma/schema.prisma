@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Waitlist {
+  id        String    @id @default(uuid())
+  fullName  String    @map("full_name")
+  email     String
+  phone     String?
+  type      String?
+  workEmail String?   @map("work_email")
+  company   String?
+  role      String?
+  teamSize  String?   @map("team_size")
+  useCase   String?   @map("use_case")
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime? @map("updated_at")
+
+  @@map("waitlist")
+}
