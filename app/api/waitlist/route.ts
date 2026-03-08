@@ -1,8 +1,9 @@
-import { Prisma } from "@prisma/client"
+import { PrismaClientInitializationError, PrismaClientKnownRequestError } from "@prisma/client/runtime/library"
 import { NextResponse } from "next/server"
 import { z } from "zod"
 
 import { prisma } from "@/lib/prisma"
+import { sendWaitlistConfirmation } from "@/lib/email"
 import { waitlistSchema } from "@/lib/waitlist"
 
 export async function POST(request: Request) {
@@ -43,13 +44,17 @@ export async function POST(request: Request) {
       },
     })
 
+    await sendWaitlistConfirmation({ fullName: payload.fullName, email: normalizedEmail }).catch(
+      (err) => console.error("waitlist_email_failed", err)
+    )
+
     return NextResponse.json({ ok: true }, { status: 201 })
   } catch (error) {
     if (error instanceof z.ZodError) {
       return NextResponse.json({ code: "INVALID_PAYLOAD" }, { status: 400 })
     }
 
-    if (error instanceof Prisma.PrismaClientKnownRequestError) {
+    if (error instanceof PrismaClientKnownRequestError) {
       if (error.code === "P2002") {
         return NextResponse.json({ code: "DUPLICATE_EMAIL" }, { status: 409 })
       }
@@ -61,7 +66,7 @@ export async function POST(request: Request) {
       }
     }
 
-    if (error instanceof Prisma.PrismaClientInitializationError) {
+    if (error instanceof PrismaClientInitializationError) {
       return NextResponse.json({ code: "DATABASE_CONNECTION_FAILED" }, { status: 500 })
     }
 
