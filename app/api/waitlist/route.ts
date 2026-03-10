@@ -18,7 +18,7 @@ export async function POST(request: Request) {
 
     const existing = await prisma.waitlist.findFirst({
       where: {
-        workEmail: normalizedEmail,
+        OR: [{ email: normalizedEmail }, { workEmail: normalizedEmail }],
       },
       select: {
         id: true,
@@ -32,6 +32,7 @@ export async function POST(request: Request) {
     await prisma.waitlist.create({
       data: {
         fullName: payload.fullName,
+        email: normalizedEmail,
         workEmail: normalizedEmail,
         company: payload.company,
         role: payload.role,
@@ -39,7 +40,7 @@ export async function POST(request: Request) {
         useCase: payload.useCase,
       },
       select: {
-        workEmail: true,
+        id: true,
       },
     })
 
@@ -56,6 +57,9 @@ export async function POST(request: Request) {
     if (error instanceof PrismaClientKnownRequestError) {
       if (error.code === "P2002") {
         return NextResponse.json({ code: "DUPLICATE_EMAIL" }, { status: 409 })
+      }
+      if (error.code === "P2011") {
+        return NextResponse.json({ code: "COLUMN_MISMATCH" }, { status: 500 })
       }
       if (error.code === "P2021") {
         return NextResponse.json({ code: "TABLE_MISSING" }, { status: 500 })

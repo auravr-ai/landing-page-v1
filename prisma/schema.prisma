@@ -11,9 +11,10 @@ datasource db {
 model Waitlist {
   id        String    @id @default(uuid())
   fullName  String    @map("full_name")
+  email     String
   phone     String?
   type      String?
-  workEmail String    @unique @map("work_email")
+  workEmail String    @map("work_email")
   company   String?
   role      String?
   teamSize  String?   @map("team_size")
