@@ -18,7 +18,7 @@ export async function POST(request: Request) {
 
     const existing = await prisma.waitlist.findFirst({
       where: {
-        OR: [{ email: normalizedEmail }, { workEmail: normalizedEmail }],
+        workEmail: normalizedEmail,
       },
       select: {
         id: true,
@@ -32,7 +32,6 @@ export async function POST(request: Request) {
     await prisma.waitlist.create({
       data: {
         fullName: payload.fullName,
-        email: normalizedEmail,
         workEmail: normalizedEmail,
         company: payload.company,
         role: payload.role,
