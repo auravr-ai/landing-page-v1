@@ -201,7 +201,7 @@ export function Header() {
                   size="sm"
                   className="bg-purple-600 hover:bg-purple-700"
                 >
-                  <Link href="/waitlist">
+                  <Link href="/waitlist" onClick={() => setMenuState(false)}>
                     <span>{t('header.getStarted')}</span>
                   </Link>
                 </Button> 
