@@ -319,7 +319,7 @@
     "submitErrors": {
       "databaseMissing": "資料庫尚未設定。請在伺服器環境變數加入 DATABASE_URL（可選 DIRECT_URL）。",
       "databaseConnection": "無法連線到資料庫。請檢查 Supabase 密碼與連線字串。",
-      "duplicateEmail": "這個電郵已在候補名單中。",
+      "duplicateEmail": "你已在候補名單中。",
       "tableMissing": "找不到 public.waitlist 資料表。請先執行 `npm run prisma:push`。",
       "columnMismatch": "waitlist 欄位與目前程式 schema 不一致。請執行 `npm run prisma:push`。",
       "fallback": "儲存失敗，請稍後再試。",

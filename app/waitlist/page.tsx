@@ -100,6 +100,7 @@ export default function WaitlistPage() {
   async function onSubmit(values: WaitlistPayload) {
     setSubmitError(null)
     setSubmittedEmail(null)
+    form.clearErrors("workEmail")
 
     try {
       const response = await fetch("/api/waitlist", {
@@ -112,23 +113,26 @@ export default function WaitlistPage() {
 
       if (!response.ok) {
         const data = (await response.json().catch(() => null)) as { code?: string } | null
+        const errorMessageByCode: Record<string, string> = {
+          DUPLICATE_EMAIL: t("waitlistPage.submitErrors.duplicateEmail"),
+          DATABASE_MISSING: t("waitlistPage.submitErrors.databaseMissing"),
+          DATABASE_CONNECTION_FAILED: t("waitlistPage.submitErrors.databaseConnection"),
+          TABLE_MISSING: t("waitlistPage.submitErrors.tableMissing"),
+          COLUMN_MISMATCH: t("waitlistPage.submitErrors.columnMismatch"),
+        }
+
+        const errorMessage = data?.code ? errorMessageByCode[data.code] ?? t("waitlistPage.submitErrors.fallback") : t("waitlistPage.submitErrors.fallback")
 
         if (data?.code === "DUPLICATE_EMAIL") {
-          throw new Error(t("waitlistPage.submitErrors.duplicateEmail"))
+          form.setError("workEmail", {
+            type: "server",
+            message: errorMessage,
+          })
+          form.setFocus("workEmail")
         }
-        if (data?.code === "DATABASE_MISSING") {
-          throw new Error(t("waitlistPage.submitErrors.databaseMissing"))
-        }
-        if (data?.code === "DATABASE_CONNECTION_FAILED") {
-          throw new Error(t("waitlistPage.submitErrors.databaseConnection"))
-        }
-        if (data?.code === "TABLE_MISSING") {
-          throw new Error(t("waitlistPage.submitErrors.tableMissing"))
-        }
-        if (data?.code === "COLUMN_MISMATCH") {
-          throw new Error(t("waitlistPage.submitErrors.columnMismatch"))
-        }
-        throw new Error(t("waitlistPage.submitErrors.fallback"))
+
+        setSubmitError(errorMessage)
+        return
       }
 
       setSubmittedEmail(values.workEmail)

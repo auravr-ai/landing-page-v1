@@ -319,7 +319,7 @@
     "submitErrors": {
       "databaseMissing": "Database is not configured. Add DATABASE_URL (and optionally DIRECT_URL) to your server environment.",
       "databaseConnection": "Cannot connect to the database. Check your Supabase password/connection string.",
-      "duplicateEmail": "This email is already on the waitlist.",
+      "duplicateEmail": "You are already on the list.",
       "tableMissing": "Table public.waitlist was not found. Run `npm run prisma:push` first.",
       "columnMismatch": "Waitlist table columns do not match the app schema. Run `npm run prisma:push`.",
       "fallback": "Failed to save your request.",
