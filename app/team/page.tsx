@@ -36,6 +36,26 @@ const teamAvatarColors = ["bg-purple-600", "bg-blue-500", "bg-green-500", "bg-vi
 const advisorAvatarColors = ["bg-indigo-500", "bg-pink-500", "bg-yellow-500", "bg-cyan-500", "bg-emerald-500", "bg-amber-500"]
 const achievementIcons = [Trophy, Award, UsersIcon, Star, BookOpen, TrendingUp]
 
+const teamPhotoByKey: Record<string, string> = {
+  member1: "/member-jake.jpeg",
+  member2: "/member-victor.jpeg",
+  member3: "/member-alison.png",
+  member4: "/member-kitty.jpeg",
+  member5: "/member-amy.png",
+  member6: "/member-fung.jpeg",
+}
+
+const advisorPhotoByKey: Record<string, string> = {
+  advisor0: "/advisor-prof-yuk-lam-lo.png",
+  advisor0b: "/advisor-dr-eric-lai.jpeg",
+  advisor1: "/advisor-prof-yvonne-han.png",
+  advisor2: "/advisor-prof-kathy-shum.png",
+  advisor3: "/advisor-prof-will-chien.png",
+  advisor4: "/advisor-mr-johnny-lam.png",
+  advisor4b: "/advisor-ms-carmela-tin.png",
+  advisor5: "/advisor-mr-eddie-lui.png",
+}
+
 function getInitials(name: string) {
   if (!name) return ""
 
@@ -58,36 +78,42 @@ function getInitials(name: string) {
 export default function TeamPage() {
   const { t } = useTranslation()
 
-  type TeamMember = { name: string; role: string; bio: string }
+  type TeamMember = { name: string; role: string; bio: string; key: string; avatarColor: string; avatarSrc?: string }
+  type RawTeamMember = Omit<TeamMember, "key" | "avatarColor" | "avatarSrc">
 
   const teamMembers = React.useMemo(() => {
-    const data = t("teamPage.teamMembers", { returnObjects: true }) as Record<string, TeamMember | { title?: string }>
+    const data = t("teamPage.teamMembers", { returnObjects: true }) as Record<string, RawTeamMember | { title?: string }>
     if (!data) return []
 
     return Object.entries(data)
       .filter(([key]) => key !== "title")
-      .map(([, member], index) => {
-        const typedMember = member as TeamMember
+      .map(([key, member], index) => {
+        const typedMember = member as RawTeamMember
         return {
+          key,
           ...typedMember,
           avatarColor: teamAvatarColors[index % teamAvatarColors.length],
+          avatarSrc: teamPhotoByKey[key],
         }
       })
   }, [t])
 
-  type Advisor = { name: string; role: string; bio: string }
+  type Advisor = { name: string; role: string; bio: string; key: string; avatarColor: string; avatarSrc?: string }
+  type RawAdvisor = Omit<Advisor, "key" | "avatarColor" | "avatarSrc">
 
   const advisors = React.useMemo(() => {
-    const data = t("teamPage.advisors", { returnObjects: true }) as Record<string, Advisor | { title?: string }>
+    const data = t("teamPage.advisors", { returnObjects: true }) as Record<string, RawAdvisor | { title?: string }>
     if (!data) return []
 
     return Object.entries(data)
       .filter(([key]) => key !== "title")
-      .map(([, advisor], index) => {
-        const typedAdvisor = advisor as Advisor
+      .map(([key, advisor], index) => {
+        const typedAdvisor = advisor as RawAdvisor
         return {
+          key,
           ...typedAdvisor,
           avatarColor: advisorAvatarColors[index % advisorAvatarColors.length],
+          avatarSrc: advisorPhotoByKey[key],
         }
       })
   }, [t])
@@ -152,8 +178,8 @@ export default function TeamPage() {
             variants={containerVariants}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
-            {teamMembers.map((member, index) => (
-              <motion.div key={index} variants={fadeInVariants}>
+            {teamMembers.map((member) => (
+              <motion.div key={member.key} variants={fadeInVariants}>
                 <Card 
                   className={cn(
                     "group h-full border-purple-300 hover:border-purple-600 transition-all duration-300",
@@ -162,7 +188,7 @@ export default function TeamPage() {
                 >
                   <CardHeader className="text-center">
                     <Avatar className="w-24 h-24 mx-auto mb-4 border-2 border-purple-300 group-hover:border-purple-600 transition-colors">
-                      <AvatarImage src="" alt={member.name} />
+                      <AvatarImage src={member.avatarSrc} alt={member.name} className="object-cover object-top" />
                       <AvatarFallback className={cn(member.avatarColor, "text-white text-xl font-semibold")}>
                         {getInitials(member.name)}
                       </AvatarFallback>
@@ -202,8 +228,8 @@ export default function TeamPage() {
             variants={containerVariants}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
-            {advisors.map((advisor, index) => (
-              <motion.div key={index} variants={fadeInVariants}>
+            {advisors.map((advisor) => (
+              <motion.div key={advisor.key} variants={fadeInVariants}>
                 <Card 
                   className={cn(
                     "group h-full border-purple-300 hover:border-purple-600 transition-all duration-300",
@@ -212,7 +238,7 @@ export default function TeamPage() {
                 >
                   <CardHeader className="text-center">
                     <Avatar className="w-24 h-24 mx-auto mb-4 border-2 border-purple-300 group-hover:border-purple-600 transition-colors">
-                      <AvatarImage src="" alt={advisor.name} />
+                      <AvatarImage src={advisor.avatarSrc} alt={advisor.name} className="object-cover object-top" />
                       <AvatarFallback className={cn(advisor.avatarColor, "text-white text-xl font-semibold")}>
                         {getInitials(advisor.name)}
                       </AvatarFallback>
